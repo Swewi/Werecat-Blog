@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o4ie%ot%24tjd@*-p396#&kczz8g12t1ye##ns)yvgnwe-%ez^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-swewi-werecatblog-2nhm2yjy91d.ws-eu111.gitpod.io',
                 '.herokuapp.com'
@@ -90,6 +90,11 @@ WSGI_APPLICATION = 'werecat.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-swewi-werecatblog-2nhm2yjy91d.ws-eu111.gitpod.io/",
+    "https://*.herokuapp.com"
+]
 
 
 # Password validation
