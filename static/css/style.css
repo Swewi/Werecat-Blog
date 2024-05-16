@@ -7,7 +7,7 @@ body {
     font-family: Poetsen One, sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    background: linear-gradient(to right, #9088d3, #445261);
+    background: linear-gradient(to right, #9088d3, #0fd1dc);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -15,6 +15,16 @@ body {
 .thin {
     font-family: Nunito Sans, sans-serif;
     font-weight: 300;
+}
+
+#request h2{
+    font-family: Poetsen One, sans-serif;
+    font-weight: 200;
+    color: #2a36c9;
+}
+
+#request p{
+    color: #282c31;
 }
 
 .light-bg {
@@ -98,7 +108,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #1edbc5;
 }
 
 .post-title {

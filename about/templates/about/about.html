@@ -19,22 +19,21 @@
     </div>
     <div class="row">
         <div class="col text-right">
-            <!-- Updated on field goes in here -->
-
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>I believe in the power of shared knowledge and collective effort.
-                Whether you have a project in mind, wish to co-author
-                an article, or simply want to brainstorm some ideas,
-                I'm excited to hear from you. Fill out the form
-                and we can get the ball rolling!</p>
-
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
+        <div class="col-12 col-md-6 my-5" id="request">
+            <h2>We love crafting!</h2>
+            <p>Have you seen anything on this blog that takes your fancy? Maybe you have got inspiration from a website
+                and need help? Ask us!</p>
+            <br>
+            <p>One of our members specialises in knitted socks and items, textiles, and small woodworking projects. The
+                other member specialises in paracord projects, rope both new and upcycled, and chainmail.</p>
+            <p>Both of us make historically inspired items. We nålbind (needle-binding), a type of yarn work
+                that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
+                tunics and dresses!</p>
+            <!-- Order/help form -->
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
@@ -45,5 +44,5 @@
 </div>
 {% endblock content %}
 {% block copyright %}
-Copyright 2024 Kiree Bellamy
+Copyright 2024 Werecat Industries
 {% endblock %}
