@@ -64,6 +64,10 @@
                     </li>
                     {% endif %}
                 </ul>
+                <!--Admin panel access for a logged in user registered as an admin-->
+                {% if user.is_authenticated and user.is_staff %}
+                <a class="btn btn-primary me-2" href="{% url 'admin:index' %}" role="button">Admin Panel</a>
+                {% endif %}
                 <span class="navbar-text text-muted">
                     We are simple crafty people living in interesting times!
                 </span>
