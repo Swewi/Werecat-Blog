@@ -1,19 +1,19 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #9b9fa5;
+    font-family: Nunito sans, sans-serif;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: Poetsen One, sans-serif;
     font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
+    font-weight: 400;
+    background: linear-gradient(to right, #9088d3, #445261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .thin {
+    font-family: Nunito Sans, sans-serif;
     font-weight: 300;
 }
 
