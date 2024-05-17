@@ -1,19 +1,19 @@
 body {
-    background-color: #838991;
-    font-family: Nunito sans, sans-serif;
+    background-color: #de3f0a;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .brand {
-    font-family: Poetsen One, sans-serif;
+    font-family: 'Poetsen One', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    background: linear-gradient(to right, #9088d3, #445f61);
+    background: linear-gradient(to right, #9088d3, #de3806);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .thin {
-    font-family: Nunito Sans, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -25,6 +25,19 @@ body {
 
 #request p{
     color: #282c31;
+}
+
+#btn-adpan{
+    background-color: #e5ee29;
+    border: none;
+    color: #1d1f1f;
+    opacity: 0.7;
+}
+
+#btn-adpan:hover,
+#btn-adpan:active {
+    background-color: #bb2523;
+    color: #ffffff;
 }
 
 .light-bg {
@@ -40,20 +53,37 @@ body {
 }
 
 .card {
-    border: none;
+    background-color: white; /* Ensure card background is white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.transparent-bg {
     background-color: transparent;
+}
+
+.card-body {
+    padding: 20px;
 }
 
 .image-container {
     position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main-bg {
+    padding: 20px;
 }
 
 .scale {

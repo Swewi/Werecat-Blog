@@ -66,7 +66,8 @@
                 </ul>
                 <!--Admin panel access for a logged in user registered as an admin-->
                 {% if user.is_authenticated and user.is_staff %}
-                <a class="btn btn-primary me-2" href="{% url 'admin:index' %}" role="button">Admin Panel</a>
+                <a id="btn-adpan" class="btn btn-primary me-3" href="{% url 'admin:index' %}" role="button"
+                    aria-label="Admin Panel" aria-haspopup="true" aria-expanded="false">Admin Panel</a>
                 {% endif %}
                 <span class="navbar-text text-muted">
                     We are simple crafty people living in interesting times!
@@ -89,7 +90,7 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        <p class="text-end m-3">Logged in as {{ user }}</p>
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}

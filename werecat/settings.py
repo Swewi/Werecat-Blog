@@ -230,7 +230,7 @@ JAZZMIN_SETTINGS = {
         "auth.group": "vertical_tabs",
     },
     # Hide certain apps from the sidebar
-    "hide_apps": ["django_summernote", "sites"],
+    "hide_apps": ["django_summernote", "sites", "socialaccount"],
 }
 
 JAZZMIN_UI_TWEAKS = {
