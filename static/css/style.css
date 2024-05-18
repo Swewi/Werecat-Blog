@@ -1,5 +1,4 @@
 body {
-    background-color: #de3f0a;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -40,16 +39,11 @@ body {
     color: #ffffff;
 }
 
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #445261;
-}
-
 .main-bg {
-    background-color: #F9FAFC;
+    background-image: url('../images/background.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
 }
 
 .card {
@@ -83,7 +77,7 @@ body {
 }
 
 .main-bg {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .scale {
