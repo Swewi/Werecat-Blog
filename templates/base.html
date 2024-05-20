@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'contact' as contact_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -80,7 +81,7 @@
         </div>
     </nav>
     <!-- displaying Django messages -->
-    <div class="container">
+    <div class="container user-pg">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
@@ -97,9 +98,20 @@
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
-        …
-        {% block content %}
-        {% endblock content %}
+
+        {% if condition %}
+        <div class="container post-bkg">
+            <!-- Content with plain image -->
+            {% block content_plain %}
+            {% endblock content_plain %}
+        </div>
+        {% else %}
+        <div class="container">
+            <!-- Content with background image -->
+            {% block content_background %}
+            {% endblock content_background %}
+        </div>
+        {% endif %}
 
     </main>
     <!-- Footer -->

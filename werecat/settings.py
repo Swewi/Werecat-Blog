@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-swewi-werecatblog-7tdy8qpovj1.ws-eu114.gitpod.io',
+ALLOWED_HOSTS = ['8000-swewi-werecatblog-7tdy8qpovj1.ws-eu111.gitpod.io',
                 '.herokuapp.com'
                 ]
 
@@ -115,7 +115,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-swewi-werecatblog-7tdy8qpovj1.ws-eu114.gitpod.io",
+    "https://8000-swewi-werecatblog-7tdy8qpovj1.ws-eu111.gitpod.io",
     "https://*.herokuapp.com"
 ]
 

@@ -5,13 +5,12 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block content %}
+{% block content_background %}
 
-<div class="container user-pg">
+<div class="container log-pg">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
-
             <p>{% blocktrans %}Hi! Hello, G'Day, and Welcome. If you'd like to leave a comment or drop a like, continue. Alternatively, if
                 you haven't joined our amazing community, create an account <a class="link" href="{{ signup_url }}">here</a>
                 , first.{% endblocktrans %}</p>
@@ -26,8 +25,9 @@
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                <p class="log-msg"><strong>P.S.</strong> Don't forget to click the message.</p>
             </form>
         </div>
     </div>
 </div>
-{% endblock %}
+{% endblock content_background %}
