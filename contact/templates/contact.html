@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6 my-5" id="request">
+        <h2>We love crafting!</h2>
+        <p>Have you seen anything on this blog that takes your fancy? Maybe you have got inspiration from a website
+            and need help? Ask us!</p>
+        <br>
+        <p>One of our members specialises in knitted socks and items, textiles, and small woodworking projects. The
+            other member specialises in paracord projects, rope both new and upcycled, and chainmail.</p>
+        <p>Both of us make historically inspired items. We nålbind (needle-binding), a type of yarn work
+            that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
+            tunics and dresses!</p>
+        <!-- Order/help form -->
+        <form method="post">
+            {{ collaborate_form | crispy }}
+            {% csrf_token %}
+            <button class="btn btn-secondary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+{% block copyright %}
+Copyright 2024 Werecat Industries
+{% endblock %}

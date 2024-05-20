@@ -6,27 +6,31 @@ body {
     font-family: 'Poetsen One', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    background: linear-gradient(to right, #9088d3, #de3806);
+    background: linear-gradient(to right, #151515, #9088d3);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .thin {
     font-family: 'Nunito Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-#request h2{
+#navbarText a {
+    color: #23BBBB;
+}
+
+#request h2 {
     font-family: Poetsen One, sans-serif;
     font-weight: 200;
     color: #2a36c9;
 }
 
-#request p{
+#request p {
     color: #282c31;
 }
 
-#btn-adpan{
+#btn-adpan {
     background-color: #e5ee29;
     border: none;
     color: #1d1f1f;
@@ -43,11 +47,12 @@ body {
     background-image: url('../images/background.jpeg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
+    background-size: cover;
 }
 
 .card {
-    background-color: white; /* Ensure card background is white */
+    background-color: white;
+    /* Ensure card background is white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -192,4 +197,8 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+#prof-img img {
+    border-radius: 20px;
 }
