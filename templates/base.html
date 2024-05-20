@@ -73,8 +73,8 @@
                 <a id="btn-adpan" class="btn btn-primary me-3" href="{% url 'admin:index' %}" role="button"
                     aria-label="Admin Panel" aria-haspopup="true" aria-expanded="false">Admin Panel</a>
                 {% endif %}
-                <span class="navbar-text text-muted">
-                    We are simple crafty people living in interesting times!
+                <span id="tag-comment" class="navbar-text">
+                    We are crafty people living in interesting times!
                 </span>
             </div>
         </div>
@@ -86,7 +86,6 @@
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 {% endfor %}
             </div>
@@ -122,6 +121,7 @@
     </script>
 
     {% block extras %}
+    <script src="{% static 'js/msgpop.js' %}"></script>
     {% endblock %}
 </body>
 

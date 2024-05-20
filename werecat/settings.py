@@ -39,7 +39,7 @@ ALLOWED_HOSTS = ['8000-swewi-werecatblog-7tdy8qpovj1.ws-eu114.gitpod.io',
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    'jazzmin',  # This is listed here, as per instructions on jazzmin page
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,7 +115,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-swewi-werecatblog-2nhm2yjy91d.ws-eu111.gitpod.io",
+    "https://8000-swewi-werecatblog-7tdy8qpovj1.ws-eu114.gitpod.io",
     "https://*.herokuapp.com"
 ]
 
@@ -235,6 +235,5 @@ JAZZMIN_SETTINGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-    "theme": "pulse",
-    "dark_mode_theme": "cyborg",
+    "theme": "cyborg",
 }

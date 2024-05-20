@@ -1,23 +1,23 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import Contact
-from .forms import CollaborateForm
+from .forms import ContactForm
 
 # Create your views here.
-if request.method == "POST":
-        collaborate_form = CollaborateForm(data=request.POST)
-        if collaborate_form.is_valid():
-            collaborate_form.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Collaboration request received! I endeavour to respond within 2 working days.'
-            )
-about = About.objects.all().order_by('-updated_on').first()
-collaborate_form = CollaborateForm()
+def contact(request):
+    if request.method == "POST":
+            contact_form = ContactForm(data=request.POST)
+            if contact_form.is_valid():
+                contact_form.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Hi I have received your message! I will do my best to respond within 2 working days.'
+                )
+    contact_form = ContactForm()
 
-return render(
-    request,
-    "about/about.html",
-    {"about": about,
-    "collaborate_form": collaborate_form},
-)
+    return render(
+        request,
+        "contact/contact.html",
+        {"contact": contact,
+        "contact_form": contact_form},
+    )

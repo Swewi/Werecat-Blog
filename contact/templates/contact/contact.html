@@ -16,7 +16,7 @@
             tunics and dresses!</p>
         <!-- Order/help form -->
         <form method="post">
-            {{ collaborate_form | crispy }}
+            {{ contact_form | crispy }}
             {% csrf_token %}
             <button class="btn btn-secondary" type="submit">Submit</button>
         </form>
