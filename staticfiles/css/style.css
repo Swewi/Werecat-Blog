@@ -78,6 +78,10 @@ body {
     padding: 20px;
 }
 
+.form-label {
+    display: none;
+}
+
 .image-container {
     position: relative;
     overflow: hidden;
@@ -186,22 +190,14 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #c92926;
 }
 
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+#btn-delete:hover,
+#btn-delete:active {
+    color: #1d1f1f;
 }
 
 .faded {
