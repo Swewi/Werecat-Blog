@@ -1,49 +1,101 @@
 body {
-    background-color: #F9FAFC;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: 'Poetsen One', sans-serif;
     font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
+    font-weight: 400;
+    background: linear-gradient(to right, #151515, #9088d3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .thin {
-    font-weight: 300;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
 }
 
-.light-bg {
-    background-color: #fff;
+#navbarText a {
+    color: #23BBBB;
 }
 
-.dark-bg {
-    background-color: #445261;
+#request h2 {
+    font-family: Poetsen One, sans-serif;
+    font-weight: 200;
+    color: #2a36c9;
+}
+
+#contact-pg {
+    color: #5fbc40;
+    background-color: rgba(25, 25, 25, 0.65);
+    border-radius: 10px;
+    margin: 0.5rem auto;
+}
+
+#btn-adpan {
+    background-color: #2f2423;
+    border: none;
+    color: #1d1f1f;
+    opacity: 0.7;
+}
+
+#btn-adpan:hover,
+#btn-adpan:active {
+    background-color: #b32927;
+    color: #ffffff;
+}
+
+#tag-comment {
+    background-color: rgba(111, 3, 3, 0.3);
+    font-family: Poetsen One, sans-serif;
+    font-weight: 100;
+    color: rgba(163, 163, 176, 0.6);
+    border-radius: 10px;
+    padding: 2px;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    min-height: 100vh;
+    background:
+        url('../images/background.jpeg') center center / cover no-repeat,
+        #353636;
+    /* Solid color underlay */
 }
 
 .card {
-    border: none;
+    background-color: rgb(255, 255, 255, 0.8);
+    /* Ensure card background is white but also a little transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.transparent-bg {
     background-color: transparent;
+}
+
+.card-body {
+    padding: 20px;
 }
 
 .image-container {
     position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main-bg {
+    padding: 20px 0;
 }
 
 .scale {
@@ -98,7 +150,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #1edbc5;
 }
 
 .post-title {
@@ -158,4 +210,49 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+#prof-img img {
+    border-radius: 20px;
+}
+
+.user-pg {
+    color: #3ce603;
+    background-color: rgba(25, 25, 25, 0.65);
+    border-radius: 10px;
+    margin: 0.5rem auto;
+}
+
+.about-pg {
+    width: 75%;
+    color: #5fbc40;
+    background-color: rgba(46, 46, 46, 0.65);
+    border-radius: 10px;
+}
+
+.log-pg {
+    color: #3ce603;
+    background-color: rgba(25, 25, 25, 0.65);
+    border-radius: 10px;
+}
+
+.log-msg {
+    margin-top: 1rem;
+}
+
+/** Media Queries  **/
+
+@media (min-width: 768px) {
+    .user-pg {
+        width: 50%;
+    }
+
+    .about-pg {
+        width: 45%;
+    }
+
+    .col-12.col-md-8.about-pg.mx-auto {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
