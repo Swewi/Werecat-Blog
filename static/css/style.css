@@ -56,10 +56,11 @@ body {
 }
 
 .main-bg {
-    background-image: url('../images/background.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    min-height: 100vh;
+    background:
+        url('../images/background.jpeg') center center / cover no-repeat,
+        #353636;
+    /* Solid color underlay */
 }
 
 .card {
