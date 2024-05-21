@@ -162,10 +162,6 @@ body {
     color: lightgray;
 }
 
-.post-bkg{
-    background-color: #b32927;
-}
-
 .btn-signup,
 .btn-edit {
     background-color: #188181;
@@ -234,7 +230,6 @@ body {
 }
 
 .log-pg {
-    width: 75%;
     color: #3ce603;
     background-color: rgba(25, 25, 25, 0.65);
     border-radius: 10px;
@@ -258,9 +253,5 @@ body {
     .col-12.col-md-8.about-pg.mx-auto {
         margin-left: 0 !important;
         margin-right: 0 !important;
-    }
-
-    .log-pg {
-        width: 45%;
     }
 }

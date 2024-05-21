@@ -99,19 +99,9 @@
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
 
-        {% if condition %}
-        <div class="container post-bkg">
-            <!-- Content with plain image -->
-            {% block content_plain %}
-            {% endblock content_plain %}
-        </div>
-        {% else %}
-        <div class="container">
-            <!-- Content with background image -->
-            {% block content_background %}
-            {% endblock content_background %}
-        </div>
-        {% endif %}
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
 
     </main>
     <!-- Footer -->
