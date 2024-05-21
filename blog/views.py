@@ -74,7 +74,6 @@ def post_detail(request, slug):
         },
     )
 
-
 def comment_edit(request, slug, comment_id):
     """
     Display an individual comment for edit.
