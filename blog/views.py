@@ -7,44 +7,14 @@ from .forms import CommentForm
 
 # Create your views here.
 class PostList(generic.ListView):
-    """
-    Returns all published posts in :model:`blog.Post`
-    and displays them in a page of three posts. 
-    **Context**
 
-    ``queryset``
-        All published instances of :model:`blog.Post`
-    ``paginate_by``
-        Number of posts per page.
-        
-    **Template:**
-
-    :template:`blog/index.html`
-    """
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 3
 
 
 def post_detail(request, slug):
-    """
-    Display an individual :model:`blog.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`blog.Post`.
-    ``comments``
-        All approved comments related to the post.
-    ``comment_count``
-        A count of approved comments related to the post.
-    ``comment_form``
-        An instance of :form:`blog.CommentForm`
-
-    **Template:**
-
-    :template:`blog/post_detail.html`
-    """
+    
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
