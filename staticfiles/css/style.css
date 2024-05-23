@@ -66,7 +66,7 @@ body {
 .card {
     background-color: rgb(255, 255, 255, 0.8);
     /* Ensure card background is white but also a little transparent */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
@@ -234,6 +234,13 @@ body {
 
 .log-msg {
     margin-top: 1rem;
+}
+
+.gallery {
+    background-color: rgb(255, 255, 255, 0.2);
+    /* Ensure gallery card background is somewhat transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 /** Media Queries  **/
