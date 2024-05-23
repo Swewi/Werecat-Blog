@@ -3,7 +3,6 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
-
 class About(models.Model):
     
     """
