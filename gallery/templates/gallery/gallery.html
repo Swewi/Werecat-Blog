@@ -3,18 +3,25 @@
 {% load cloudinary %}
 
 {% block content %}
+<!-- Main container for gallery items -->
 <div class="col-12 mt-3 left">
     <div class="row">
+        <!-- Loop through each item in the gallery_items list -->
         {% for item in gallery_items %}
+        <!-- Each item is displayed in a column with some styling classes -->
         <div class="col-md-3 transparent-bg">
             <div class="card mx-auto h-100 w-77">
                 <div class="card-body">
+                    <!-- Display the item's name -->
                     <h3>{{ item.name }}</h3>
+                    <!-- Display the item's image using Cloudinary URL -->
                     <img class="card-img-top" src="{% cloudinary_url item.gallery_image %}" alt="{{ item.name }}">
+                    <!-- Display the item's description -->
                     <p>{{ item.description }}</p>
                 </div>
             </div>
         </div>
+        <!-- Check if the current item index is divisible by 4 to close and start a new row -->
         {% if forloop.counter|divisibleby:4 %}
     </div>
     <div class="row mb-4">
@@ -22,14 +29,17 @@
         {% endfor %}
     </div>
 </div>
+<!-- Pagination section -->
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
+        <!-- If there is a previous page, show the "PREV" button -->
         {% if page_obj.has_previous %}
         <li class="page-item">
             <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
         </li>
         {% endif %}
+        <!-- If there is a next page, show the "NEXT" button -->
         {% if page_obj.has_next %}
         <li class="page-item">
             <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
@@ -42,5 +52,7 @@
 {% endblock %}
 
 {% block copyright %}
+<!-- Footer copyright -->
 Copyright 2024 Werecat Industries
 {% endblock %}
+

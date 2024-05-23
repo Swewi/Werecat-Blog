@@ -5,6 +5,11 @@ from .forms import ContactForm
 
 # Create your views here.
 def contact(request):
+    
+    """
+    View function to render the contact page with contact information.
+    """
+    
     if request.method == "POST":
             contact_form = ContactForm(data=request.POST)
             if contact_form.is_valid():

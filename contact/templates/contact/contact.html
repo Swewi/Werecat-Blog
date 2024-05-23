@@ -3,9 +3,15 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<!-- Main content block -->
+
+<!-- Row to center the contact form on the page -->
 <div class="row justify-content-center">
+    <!-- Column that will hold the contact form, centered and responsive -->
     <div class="col-12 col-md-6 my-5" id="contact-pg">
+        <!-- Heading of the contact page -->
         <h2>We love crafting!</h2>
+        <!-- Introduction and description about the blog and crafting specialties -->
         <p>Have you seen anything on this blog that takes your fancy? Maybe you have got inspiration from a website
             and need help? Ask us!</p>
         <p>One of our members specialises in knitted socks and items, textiles, and small woodworking projects. The
@@ -14,15 +20,20 @@
             that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
             tunics and dresses!</p>
         <!-- Order/help form -->
+        <!-- Form to be used for contacting or ordering help -->
         <form method="post">
+            <!-- Render the contact form using crispy_forms for better styling and functionality -->
             {{ contact_form | crispy }}
+            <!-- Django CSRF token for security -->
             {% csrf_token %}
+            <!-- Submit button for the form -->
             <button class="btn btn-secondary " type="submit">Submit</button>
         </form>
     </div>
 </div>
-
 {% endblock content %}
+
 {% block copyright %}
+<!-- Footer copyright -->
 Copyright 2024 Werecat Industries
 {% endblock %}

@@ -1,29 +1,63 @@
 {% extends 'base.html' %}
+<!-- Extend the base template -->
+
 {% load static %}
+<!-- Load static files like CSS and JavaScript -->
+
 {% load crispy_forms_tags %}
+<!-- Load crispy forms tags for better form styling -->
 
 {% block content %}
+<!-- Define the main content block -->
+
 <div class="container mt-5">
+    <!-- Bootstrap container for content with top margin -->
+
     <div class="row">
+        <!-- Bootstrap row -->
+
         <div id="prof-img" class="col-12 col-md-4 text-center">
+            <!-- Column for the profile image -->
             {% if "placeholder" in about.profile_image.url %}
+            <!-- Check if the profile image is a placeholder -->
             <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+            <!-- Use a default placeholder image if no profile image is provided -->
             {% else %}
             <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
+            <!-- Display the profile image -->
             {% endif %}
         </div>
+        <!-- End of column for profile image -->
+
         <div class="col-12 col-md-8 about-pg mx-auto">
+            <!-- Column for about page content -->
             <h2>{{ about.title }}</h2>
+            <!-- Display the title of the about page -->
             {{ about.content | safe }}
+            <!-- Display the content of the about page (safe filter used to render HTML content) -->
         </div>
+        <!-- End of column for about page content -->
     </div>
+    <!-- End of row -->
+
     <div class="row">
+        <!-- Another Bootstrap row -->
         <div class="col text-right">
+            <!-- Column for text alignment -->
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+            <!-- Display the last updated date of the about page content -->
         </div>
+        <!-- End of column for text alignment -->
     </div>
+    <!-- End of row -->
 </div>
+<!-- End of container -->
+
 {% endblock content %}
+<!-- End of content block -->
+
 {% block copyright %}
+<!-- Copyright block -->
 Copyright 2024 Werecat Industries
 {% endblock %}
+<!-- End of copyright block -->

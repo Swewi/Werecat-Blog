@@ -5,9 +5,11 @@ from cloudinary.models import CloudinaryField
 
 
 class About(models.Model):
+    
     """
-    Stores about us text
+    Model to store information about us.
     """
+    
     title = models.CharField(max_length=200)
     profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)

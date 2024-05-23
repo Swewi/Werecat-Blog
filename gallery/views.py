@@ -3,6 +3,11 @@ from django.shortcuts import render
 from .models import Gallery
 
 def gallery(request):
+    
+    """
+    View function to render the gallery page with gallery items.
+    """
+    
     gallery_items_list = Gallery.objects.all()
     paginator = Paginator(gallery_items_list, 4)  # Show 4 gallery items per page
 

@@ -3,66 +3,122 @@
 {% load cloudinary %}
 
 {% block content %}
+<!-- This block defines the main content of the page -->
 
-<!-- index.html content starts here -->
 <div class="container-fluid">
+    <!-- Bootstrap container to hold the content -->
+
     <div class="row">
+        <!-- Bootstrap row -->
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
+            <!-- Bootstrap column to hold the blog entries -->
+
             <div class="row">
+                <!-- Another Bootstrap row for displaying blog entries -->
+
                 {% for post in post_list %}
+                <!-- Loop through each blog post in the post_list -->
+
                 <div class="col-md-4 transparent-bg">
+                    <!-- Bootstrap column to display each individual blog post -->
+
                     <div class="card mx-auto h-100 w-75">
+                        <!-- Bootstrap card component for each blog post -->
+
                         <div class="card-body">
+                            <!-- Card body section -->
+
                             <div class="image-container">
+                                <!-- Container for the featured image -->
+
                                 {% if "placeholder" in post.featured_image.url %}
+                                <!-- Check if the featured image is a placeholder -->
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
+                                <!-- Use a default placeholder image if no featured image is provided -->
                                 {% else %}
                                 <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <!-- Display the featured image -->
                                 {% endif %}
+
                                 <div class="image-flash">
+                                    <!-- Flash overlay on the featured image -->
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row mb-4">
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
 
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                <!-- Link to the detailed view of the blog post -->
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <!-- Display the title of the blog post -->
+                                <p class="card-text">{{ post.excerpt }}</p>
+                                <!-- Display the excerpt of the blog post -->
+                            </a>
+                            <hr>
+                            <!-- Horizontal line separator -->
+                            <p class="card-text text-muted h6">{{ post.created_on }}</p>
+                            <!-- Display the creation date of the blog post -->
+                        </div>
+                        <!-- End of card body section -->
+                    </div>
+                    <!-- End of card component -->
+                </div>
+                <!-- End of column for each blog post -->
+
+                {% if forloop.counter|divisibleby:3 %}
+                <!-- Check if three posts have been displayed -->
+
+            </div>
+            <!-- End of row -->
+            <div class="row mb-4">
+                <!-- Start a new row for every three posts -->
+                {% endif %}
+                <!-- End of if statement -->
+                {% endfor %}
+                <!-- End of loop through blog posts -->
+            </div>
+            <!-- End of row -->
+        </div>
+        <!-- End of Blog Entries Column -->
     </div>
+    <!-- End of row -->
 </div>
+<!-- End of container -->
+
 {% if is_paginated %}
+<!-- Pagination section -->
 <nav aria-label="Page navigation">
+    <!-- Navigation for pagination -->
     <ul class="pagination justify-content-center">
+        <!-- Pagination links -->
         {% if page_obj.has_previous %}
+        <!-- Check if there is a previous page -->
         <li>
+            <!-- Previous page link -->
             <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
         </li>
+        <!-- End of previous page link -->
         {% endif %}
+        <!-- End of if statement -->
         {% if page_obj.has_next %}
+        <!-- Check if there is a next page -->
         <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        <!-- Next page link -->
         {% endif %}
+        <!-- End of if statement -->
     </ul>
+    <!-- End of pagination links -->
 </nav>
+<!-- End of pagination section -->
 {% endif %}
+<!-- End of if statement for pagination -->
 </div>
+<!-- End of content block -->
 
-<!-- index.html content ends here -->
 {% endblock content %}
 {% block copyright %}
+<!-- Copyright block -->
 Copyright 2024 Werecat Industries
 {% endblock %}
