@@ -21,11 +21,10 @@
                 that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
                 tunics and dresses!</p>
         </div>
-        <!-- Order/help form -->
         <!-- Form to be used for contacting or ordering help -->
         <form method="post" aria-labelledby="contact-heading" aria-describedby="contact-description">
             <!-- Render the contact form using crispy_forms for better styling and functionality -->
-            {{ contact_form | crispy }}
+            {{ contact_form|crispy }}
             <!-- Django CSRF token for security -->
             {% csrf_token %}
             <!-- Submit button for the form -->
