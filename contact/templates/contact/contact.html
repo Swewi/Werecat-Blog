@@ -10,24 +10,26 @@
     <!-- Column that will hold the contact form, centered and responsive -->
     <div class="col-12 col-md-6 my-5" id="contact-pg">
         <!-- Heading of the contact page -->
-        <h2>We love crafting!</h2>
+        <h2 id="contact-heading">We love crafting!</h2>
         <!-- Introduction and description about the blog and crafting specialties -->
-        <p>Have you seen anything on this blog that takes your fancy? Maybe you have got inspiration from a website
-            and need help? Ask us!</p>
-        <p>One of our members specialises in knitted socks and items, textiles, and small woodworking projects. The
-            other member specialises in paracord projects, rope both new and upcycled, and chainmail.</p>
-        <p>Both of us make historically inspired items. We nålbind (needle-binding), a type of yarn work
-            that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
-            tunics and dresses!</p>
+        <div id="contact-description">
+            <p>Have you seen anything on this blog that takes your fancy? Maybe you have got inspiration from a website
+                and need help? Ask us!</p>
+            <p>One of our members specialises in knitted socks and items, textiles, and small woodworking projects. The
+                other member specialises in paracord projects, rope both new and upcycled, and chainmail.</p>
+            <p>Both of us make historically inspired items. We nålbind (needle-binding), a type of yarn work
+                that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
+                tunics and dresses!</p>
+        </div>
         <!-- Order/help form -->
         <!-- Form to be used for contacting or ordering help -->
-        <form method="post">
+        <form method="post" aria-labelledby="contact-heading" aria-describedby="contact-description">
             <!-- Render the contact form using crispy_forms for better styling and functionality -->
             {{ contact_form | crispy }}
             <!-- Django CSRF token for security -->
             {% csrf_token %}
             <!-- Submit button for the form -->
-            <button class="btn btn-secondary " type="submit">Submit</button>
+            <button class="btn btn-secondary" type="submit" aria-label="Submit">Submit</button>
         </form>
     </div>
 </div>

@@ -12,7 +12,7 @@
         <!-- Bootstrap row -->
 
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3 left" aria-label="Blog Entries Column">
             <!-- Bootstrap column to hold the blog entries -->
 
             <div class="row">
@@ -21,7 +21,8 @@
                 {% for post in post_list %}
                 <!-- Loop through each blog post in the post_list -->
 
-                <div class="col-md-4 transparent-bg">
+                <div class="col-md-4 transparent-bg" aria-label="Individual Blog Post" role="article"
+                    aria-labelledby="post-title-{{ forloop.counter }}">
                     <!-- Bootstrap column to display each individual blog post -->
 
                     <div class="card mx-auto h-100 w-75">
@@ -49,7 +50,8 @@
                                 </div>
                             </div>
 
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link"
+                                aria-label="Read more about {{ post.title }}">
                                 <!-- Link to the detailed view of the blog post -->
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <!-- Display the title of the blog post -->
@@ -89,7 +91,7 @@
 
 {% if is_paginated %}
 <!-- Pagination section -->
-<nav aria-label="Page navigation">
+<nav aria-label="Page navigation" class="mt-4">
     <!-- Navigation for pagination -->
     <ul class="pagination justify-content-center">
         <!-- Pagination links -->

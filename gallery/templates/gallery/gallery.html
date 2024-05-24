@@ -31,18 +31,25 @@
 </div>
 <!-- Pagination section -->
 {% if is_paginated %}
-<nav aria-label="Page navigation">
+<nav aria-label="Pagination" class="mt-4">
     <ul class="pagination justify-content-center">
-        <!-- If there is a previous page, show the "PREV" button -->
         {% if page_obj.has_previous %}
         <li class="page-item">
-            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Previous Page">&laquo;
+                PREV</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled" aria-disabled="true">
+            <span class="page-link" aria-hidden="true">&laquo; PREV</span>
         </li>
         {% endif %}
-        <!-- If there is a next page, show the "NEXT" button -->
         {% if page_obj.has_next %}
         <li class="page-item">
-            <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+            <a href="?page={{ page_obj.next_page_number }}" class="page-link" aria-label="Next Page">NEXT &raquo;</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled" aria-disabled="true">
+            <span class="page-link" aria-hidden="true">NEXT &raquo;</span>
         </li>
         {% endif %}
     </ul>
@@ -55,4 +62,3 @@
 <!-- Footer copyright -->
 Copyright 2024 Werecat Industries
 {% endblock %}
-

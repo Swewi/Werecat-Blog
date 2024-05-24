@@ -46,40 +46,42 @@
             </button>
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="navigation">
                     <!-- Home Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
-                            href="{{ home_url }}">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}"
+                            aria-current="{% if request.path == home_url %}page{% endif %}">Home</a>
                     </li>
                     <!-- Gallery Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == gallery_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link {% if request.path == gallery_url %}active{% endif %}"
+                            href="{% url 'gallery' %}"
+                            aria-current="{% if request.path == gallery_url %}page{% endif %}">Gallery</a>
                     </li>
                     <!-- About Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
-                            href="{{ about_url }}">About</a>
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"
+                            aria-current="{% if request.path == about_url %}page{% endif %}">About</a>
                     </li>
                     <!-- Contact Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}"
-                            href="{{ contact_url }}">Contact</a>
+                        <a class="nav-link {% if request.path == contact_url %}active{% endif %}"
+                            href="{{ contact_url }}"
+                            aria-current="{% if request.path == contact_url %}page{% endif %}">Contact</a>
                     </li>
                     <!-- User Authentication Links -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
                             href="{{ logout_url }}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
                             href="{{ signup_url }}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}"
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}"
                             href="{{ login_url }}">Login</a>
                     </li>
                     {% endif %}
@@ -133,11 +135,11 @@
             Copyright 2024 Werecat Industries
             {% endblock %}
         </p>
-        <p class="m-0 text-center text-white">Follow us: 
-            <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center text-white">Follow us:
+            <i class="fab fa-facebook-square ms-3" aria-label="Facebook"></i>
+            <i class="fab fa-twitter-square ms-3" aria-label="Twitter"></i>
+            <i class="fab fa-instagram-square ms-3" aria-label="Instagram"></i>
+            <i class="fab fa-youtube-square ms-3" aria-label="YouTube"></i>
         </p>
     </footer>
 

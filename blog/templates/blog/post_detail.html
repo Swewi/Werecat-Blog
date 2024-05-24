@@ -10,7 +10,7 @@
 {% block content %}
 <!-- Define the main content block -->
 
-<div class="masthead">
+<div class="masthead" role="banner" aria-labelledby="masthead-title">
     <!-- Masthead section -->
     <div class="container">
         <!-- Bootstrap container for content -->
@@ -20,7 +20,7 @@
             <div class="col-md-6 masthead-text">
                 <!-- Column for masthead text -->
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
+                <h1 class="post-title" id="masthead-title">{{ post.title }}</h1>
                 <!-- Post author goes before the |, the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
@@ -30,7 +30,7 @@
                 <!-- Column for masthead image (visible only on medium and larger screens) -->
                 {% if "placeholder" in post.featured_image.url %}
                 <!-- Check if the featured image is a placeholder -->
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                <img src="{% static 'images/default.jpg' %}" class="scale" alt="Placeholder image">
                 <!-- Use a default placeholder image if no featured image is provided -->
                 {% else %}
                 <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
@@ -90,7 +90,8 @@
                 <!-- Card body for comments -->
                 {% for comment in comments %}
                 <!-- Loop through comments -->
-                <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}"
+                    role="article" aria-labelledby="comment-author-{{ comment.id }}">
                     <!-- Comment item -->
                     <p class="font-weight-bold">
                         <!-- Comment author and creation date -->
@@ -150,15 +151,16 @@
 <!-- End of container -->
 
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+    aria-describedby="deleteModalDescription" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                Are you sure you want to delete your comment? This action cannot be undone.
+            <div class="modal-body" id="deleteModalDescription">
+                Are you sure? You can't undo this action.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
