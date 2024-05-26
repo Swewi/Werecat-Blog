@@ -1,31 +1,37 @@
+/* Font for the entire body */
 body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+/* Brand styling */
 .brand {
     font-family: 'Poetsen One', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     background: linear-gradient(to right, #151515, #9088d3);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
 }
 
+/* Font style for thinner text elements */
 .thin {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
 }
 
+/* Navbar text color */
 #navbarText a {
     color: #23BBBB;
 }
 
+/* Styling for request headers */
 #request h2 {
-    font-family: Poetsen One, sans-serif;
+    font-family: 'Poetsen One', sans-serif;
     font-weight: 200;
     color: #2a36c9;
 }
 
+/* Contact page styling */
 #contact-pg {
     color: #5fbc40;
     background-color: rgba(25, 25, 25, 0.65);
@@ -33,6 +39,7 @@ body {
     margin: 0.5rem auto;
 }
 
+/* Admin panel button styling */
 #btn-adpan {
     background-color: #2f2423;
     border: none;
@@ -40,54 +47,62 @@ body {
     opacity: 0.7;
 }
 
+/* Admin panel button hover and active states */
 #btn-adpan:hover,
 #btn-adpan:active {
     background-color: #b32927;
     color: #ffffff;
 }
 
+/* Navbar tag comment styling */
 #tag-comment {
     background-color: rgba(111, 3, 3, 0.3);
-    font-family: Poetsen One, sans-serif;
+    font-family: 'Poetsen One', sans-serif;
     font-weight: 100;
     color: rgba(163, 163, 176, 0.6);
     border-radius: 10px;
     padding: 2px;
 }
 
+/* Main background styling with an image and a fallback color */
 .main-bg {
     min-height: 100vh;
     background:
         url('../images/background.jpeg') center center / cover no-repeat,
-        #353636;
-    /* Solid color underlay */
+        #353636; /* Solid color underlay */
+    padding: 20px 0;
 }
 
+/* Card component styling */
 .card {
-    background-color: rgb(255, 255, 255, 0.8);
-    /* Ensure card background is white but also a little transparent */
+    background-color: rgb(255, 255, 255, 0.8); /* Slightly transparent white background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
+/* Transparent background utility class */
 .transparent-bg {
     background-color: transparent;
 }
 
+/* Card body padding */
 .card-body {
     padding: 20px;
 }
 
+/* Hides form labels */
 .form-label {
     display: none;
 }
 
+/* Image container styling */
 .image-container {
     position: relative;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
 }
 
+/* Flash message styling inside images */
 .image-flash {
     position: absolute;
     bottom: 10px;
@@ -98,21 +113,20 @@ body {
     border-radius: 5px;
 }
 
-.main-bg {
-    padding: 20px 0;
-}
-
+/* Image scaling */
 .scale {
     width: 100%;
     height: auto;
 }
 
+/* Author text styling */
 .author {
     color: white;
     margin: 4px;
     text-transform: uppercase;
 }
 
+/* Masthead section styling */
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -122,17 +136,20 @@ body {
     width: 100%;
 }
 
+/* Masthead text styling */
 .masthead-text {
     background-color: #445261;
     color: white;
     position: relative;
 }
 
+/* Masthead image container styling */
 .masthead-image {
     position: relative;
     overflow: hidden;
 }
 
+/* Masthead image skew effect */
 .masthead-image:after {
     content: "";
     position: absolute;
@@ -141,77 +158,89 @@ body {
     height: 100%;
     width: 150%;
     background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
 }
 
+/* Post link styling */
 .post-link {
     text-decoration: none;
     color: #445261;
 }
 
+/* Post link hover and page link styling */
 .post-link:hover,
 .page-link {
     color: #1edbc5;
 }
 
+/* Post title margin */
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
 }
 
+/* Post subtitle styling */
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
 
+/* Signup and edit button styling */
 .btn-signup,
 .btn-edit {
     background-color: #188181;
     color: #fff;
 }
 
+/* Signup button hover and active states */
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
     color: #23BBBB;
 }
 
+/* Link styling */
 .link {
     color: #23BBBB;
     text-decoration: none;
 }
 
+/* Link hover and active states */
 .link:hover,
 .link:active {
     color: #445261;
     text-decoration: underline;
 }
 
+/* Delete button styling */
 .btn-delete {
     color: #fff;
     background: #c92926;
 }
 
+/* Delete button hover and active states */
 #btn-delete:hover,
 #btn-delete:active {
     color: #1d1f1f;
 }
 
+/* Faded text color */
 .faded {
     color: rgb(172, 175, 175);
 }
 
+/* Approval text color */
 .approval {
     color: rgb(222, 146, 168);
 }
 
+/* Profile image border radius */
 #prof-img img {
     border-radius: 20px;
 }
 
+/* User page styling */
 .user-pg {
     color: #3ce603;
     background-color: rgba(25, 25, 25, 0.65);
@@ -219,6 +248,7 @@ body {
     margin: 0.5rem auto;
 }
 
+/* About page styling */
 .about-pg {
     width: 75%;
     color: #5fbc40;
@@ -226,25 +256,28 @@ body {
     border-radius: 10px;
 }
 
+/* Login page styling */
 .log-pg {
     color: #3ce603;
     background-color: rgba(25, 25, 25, 0.65);
     border-radius: 10px;
 }
 
+/* Login message margin */
 .log-msg {
     margin-top: 1rem;
 }
 
+/* Gallery card styling */
 .gallery {
-    background-color: rgb(255, 255, 255, 0.2);
-    /* Ensure gallery card background is somewhat transparent */
+    background-color: rgb(255, 255, 255, 0.2); /* Slightly transparent white background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
-/** Media Queries  **/
+/* Media Queries */
 
+/* Adjustments for medium-sized devices and larger */
 @media (min-width: 768px) {
     .user-pg {
         width: 50%;

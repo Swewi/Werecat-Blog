@@ -124,8 +124,9 @@ The 'blog entry' section erd
 
 ![Screenshot 'blog entry' erd](static/images/readme/pst%20erd.png)
 
+As part of this process I used a kanban board to monitor user stories, and ensure I complete everything the client wanted, with the exception of the 'stretch goals'.  Shown below is a screenshot of the kanban board I created for this project.
 
-
+![Screenshot of kanban board relavent to this project](static/images/readme/kanban%20board.png)
 
 ## Technologies
 
@@ -176,4 +177,20 @@ This is a list of technologies I used to manually test both the code and the acc
 * [W3C HTML Markup Validator](https://validator.w3.org/) to check HTML code.
 * [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to check CSS code.
 
+## Testing
+
+I carried out both manual and automatic testing for this project.
+
+### Manual testing
+
+HTML - I used the w3 validator to check the HTML code, while this produced a number of 'errors' they were all relating to having python code integrated into the HTML, I was using the validator to check for any errors I may have introduced through spelling, syntax.  None of the templates I checked had any issues.
+CSS - I used the css validator to check the stylesheet.  There were no errors.
+Javascript - The errors that came up were warnings about character count.
+
+### Automatic testing
+
+There are test files for every app, when they are run there are no issues.
+* In order to run these tests do the following:
+* - Within the terminal type > python manage.py test
+* - hit enter
 
