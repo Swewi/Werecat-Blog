@@ -31,3 +31,52 @@ This is the first page you see when opening the site, it has a responsive design
 
 ![Home page for an ipad sized screen](static/images/readme/home%20ipad.png)
 
+#### Navbar
+
+It has a fully functional navbar:
+
+Large screen version
+
+![Large screen navbar including Admin button](static/images/readme/navbar%20inc%20admin.png)
+
+Small screen version
+
+![Small screen navbar](static/images/readme/menu%20small%20screen.png)
+
+You can see that there is an admin button on the right hand side, this allows a user logged in as Admin can access the admin panel directly from the home page.  There is a 'sign out' link, that will be display as follows:
+
+![Sign out screen](static/images/readme/sign%20out%20screen%20-%20large%20laptop.png)
+
+You will recieve a message once you succesfully log out:
+
+![Sign out message](static/images/readme/logout%20alert.png)
+
+After succesfully signing out the sign out button is replaced with a 'register' and 'sign in' link.  If either of these options is clicked you it will re-direct you to the appropiate screen.
+
+The register link opens to show this page, shown here for ipads:
+
+![Sign up/register screen](static/images/readme/signup%20ipad.png)
+
+The sign-in link opens to show the following page:
+
+![Sign in larger screen](static/images/readme/signin%20screen%20laptop.png)
+
+The same page for a smaller mobile screen:
+
+![Sign in small screen](static/images/readme/signin%20galaxy%20fold.png)
+
+After succesfully registering or signing in there will be a message shown to notify you, I have only shown a single version here:
+
+![Sign in alert](static/images/readme/signin%20alert.png)
+
+#### Body of the page
+
+Under the navbar we find the section with the blog posts, these are displayed in a card form that will open the post completely when the title of the post is clicked.  Each card shows a header image, that is by default, the same one shown at the top of the ReadMe, however there is an option to add images to the post to override this.
+
+Blog post opened up for reading in a mobile phone sized screen:
+
+![Mobile screen blog post](static/images/readme/)
+
+Same post but for an ipad sized screen:
+
+![ipad screen sized blog post](static/images/readme/)
