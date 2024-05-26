@@ -9,5 +9,5 @@ class ContactForm(forms.ModelForm):
         labels = {
             'name': 'Your Name',
             'email': 'Your Email',
-            'message': 'Your Message'
+            'message': 'Your Message',
         }
