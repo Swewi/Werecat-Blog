@@ -75,8 +75,26 @@ Under the navbar we find the section with the blog posts, these are displayed in
 
 Blog post opened up for reading in a mobile phone sized screen:
 
-![Mobile screen blog post](static/images/readme/)
+![Mobile screen blog post](static/images/readme/v-small-ps.png)
 
 Same post but for an ipad sized screen:
 
-![ipad screen sized blog post](static/images/readme/)
+![ipad screen sized blog post](static/images/readme/small-ps.png)
+
+Finally at the bottom of the page the clients wanted a link to social media so that users have an easy way to connect.
+
+### Gallery
+
+The gallery page, it has a responsive design so that it displays differently for different sized screens, the version shown here is for an ipad.  It is a very simple, straight forward design, looking very similar to the home page, but with more cards per page. -- Late into the project the client said they wanted the gallery to auto populate from the blog posts, after discussions we decided to have that as their "stretch goal" and I will work on it after the initial release. --
+
+This is a screenshot of the gallery from an ipad:
+
+![ipad screen of the gallery](static/images/readme/gallery%20ipad.png)
+
+### About
+
+The about page, it has a responsive design so that it displays differently for different sized screens, the version shown here is for larger screens, in this case the laptop the project was designed and coded on.  It is a very simple design, with an image supplied by the client, however there is a default image available as well.  The text is styled to follow the clients colour palette and other design choices.
+
+![larger screen about us screenshot](static/images/readme/about%20screen%20laptop.png)
+
+
