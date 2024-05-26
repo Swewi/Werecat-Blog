@@ -97,4 +97,83 @@ The about page, it has a responsive design so that it displays differently for d
 
 ![larger screen about us screenshot](static/images/readme/about%20screen%20laptop.png)
 
+### Contact
+
+The about page, it has a responsive design so that it displays differently for different sized screens, __________________________
+It's a simple form, the client didn't want anything to complicated, three fields, name, email, and message.  It does what the client wants and allows both registered users and site visitors to contact the client.
+
+![screenshot of contact form](static/images/readme/)
+
+### Admin
+
+The Admin panel is one of the most important parts of this site, it is where the clients will be able to enter their posts, and images, monitor user registrations, check any contact requests and reply as needed, monitor and approve or delete comments.
+
+![screenshot of admin panel](static/images/readme/admin%20dashboard.png)
+
+## Development
+
+Using a database for this project meant I needed a way to track interactions of database items, to achieve this I used Entity Relationship Diagrams, if I hadn't tracked these things I would have got lost while trying to ensure everything was interacting correctly.
+
+These are the two I have as digital the rest I have scrawled on my notepads:
+
+The 'About' section erd
+
+![Screenshot 'about' erd](static/images/readme/about%20erd.png)
+
+The 'blog entry' section erd
+
+![Screenshot 'blog entry' erd](static/images/readme/pst%20erd.png)
+
+
+
+
+## Technologies
+
+This is a list of technologies I used while building this site:
+***
+* Django Framework - version 4.2.13
+* Django allauth - version 0.57.2
+* Django Crispy forms - version 2.1
+* Django Jazzmin - version 3.0.0
+* Django Summernote - version 0.8.20.0
+* gunicorn - version 20.1.0
+* psycopg2 - version 2.9.9
+* cloudinary - version 1.36.0
+* whitenoise - version 5.3.0
+* Bootstrap - version 5.3.x
+* pip - version 24.0
+* python - for the functionality of the inside gubins of the website.
+* HTML  - to accomplish the structure of the website.
+* CSS - to style the website.
+* Javascript - for the functionality of the user visable website.
+* Git - to provide version control (to commit and push code to the repository). 
+* Gitpod - IDE to develop the website.
+* Github - To host the source code.
+* Swewi's kanban board - To monitor user stories and track.
+* Heroku - Used to deploy the project.
+* Google Dev Tools - For page inspection and checking website.
+* Code Institute's Gitpod Template - to generate the workspace for the project.
+* Mural - to make the ERD's for database interactions.
+* [Lorem Ipsum](https://loremipsum.io/) - Creating initial content to check pagination.
+* ElephantSQL - to host the postgres database.
+
+This is a list of technologies I used to design this website:
+***
+* [TechSini](https://techsini.com/multi-mockup/) To create mockup image.
+* [TinyJPG](https://tinyjpg.com/) To compress images.
+* [FontAwesome](https://fontawesome.com/) Icons.
+* [Goggle Fonts](https://fonts.google.com/) For website fonts.
+* [Favicon](https://favicon.io/) To create favicon for the website.
+* [Open art AI](https://openart.ai/home) To create the background image.
+* [ChatGPT](https://chat.openai.com/) used for spell checking, grammar, readability, and creating blog posts.
+* My own photo's.
+
+This is a list of technologies I used to manually test both the code and the accessability:
+***
+* [Colorfilter](https://www.toptal.com/designers/colorfilter/) to check website for colour-blind accessibility.
+* [NVDA screen reader](https://www.nvaccess.org/) to access screen reader capabilities on website.
+* Google Chrome's [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to check accessibility.
+* [W3C HTML Markup Validator](https://validator.w3.org/) to check HTML code.
+* [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to check CSS code.
+
 
