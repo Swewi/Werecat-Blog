@@ -191,6 +191,6 @@ Javascript - The errors that came up were warnings about character count.
 
 There are test files for every app, when they are run there are no issues.
 * In order to run these tests do the following:
-* - Within the terminal type > python manage.py test
+* - Within the terminal type > **python manage.py test**
 * - hit enter
 
