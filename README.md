@@ -99,10 +99,15 @@ The **About page**, it has a responsive design so that it displays differently f
 
 ### Contact
 
-The **Contact page**, it has a responsive design so that it displays differently for different sized screens, __________________________
-It's a simple form, the client didn't want anything to complicated, three fields, name, email, and message.  It does what the client wants and allows both registered users and site visitors to contact the client.
+The **Contact page**, it has a responsive design so that it displays differently for different sized screens.  It's a straight forward form, the client didn't want anything to complicated, three fields, name, email, and message.  It does what the client wants and allows both registered users and site visitors to contact the client.
 
-![screenshot of contact form](static/images/readme/)
+This is the contact page shown on a small mobile screen:
+
+![screenshot of contact form for small mobiles](static/images/readme/contact%20small.png)
+
+This is the contact page shown on an ipad:
+
+![screenshot of contact form for ipad](static/images/readme/contact%20larger.png)
 
 ### Admin
 
@@ -276,6 +281,10 @@ I have tested the website on four different browsers:
     - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
 
 # Deployment
+
+### Important point for this project
+This is a django project, as such it has been built with the django framework, in order to maintain a level of security for certain variables they stored within a secret file env.py.  This file **IS NOT** stored within the project, it must be recreated if you are starting a new workspace, please ensure you use your own details for this.
+
 ## Cloning the Repository
 
 * On Github navigate to the repository "https://github.com/Swewi/Werecat-Blog/tree/main"
@@ -328,3 +337,9 @@ I have tested the website on four different browsers:
 ###### Important Information about forking a repository
 * The web application is displayed and deployed using template provided by Code Institute to test the code.
 * For this project I used Manual deployment method to deploy the current state of the branch, every time I pushed the code from Gitpod.
+
+# Credits
+
+* Code Institute's 'Codestar' project.
+* My partner for understanding why I am working at the weekend.
+* My mentor Ronan for understanding why stupid questions are asked.
