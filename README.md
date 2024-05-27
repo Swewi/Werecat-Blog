@@ -17,7 +17,7 @@ The idea behind this website was to design a blog for a couple of crafty people 
 
 The client wanted a 'blog' so they could keep their community upto date with their project, any courses they may want to expand into, interesting events and information.  The second ask was for a 'contact form' so that people could contact them.  The third thing they wanted was an 'about me' page to introduce themselves to the world.  And finally they wanted a 'gallery' to show off.
 
-They requested a vibrant cyberpunk colour scheme, when questioned about a preference for background image versus a solid colour, they said they had been playing with AI image generation and would love to have a background image using the colour scheme discused, and AI image generation.  We had a play with several generators while we were discussing things, and had a play with prompts.  After several tries we settled on this image:
+They requested a vibrant cyberpunk colour scheme, when questioned about a preference for background image versus a solid colour, they said they had been playing with AI image generation and would love to have a background image using the colour scheme discused, and AI image generation, but could we also have a solid colour for any overflow.  We had a play with several generators while we were discussing things, and had a play with prompts.  After several tries we settled on this image:
 
 ![Background image for blog](static/images/readme/Background.jpeg)
 
@@ -85,7 +85,7 @@ Finally at the bottom of the page the clients wanted a link to social media so t
 
 ### Gallery
 
-The gallery page, it has a responsive design so that it displays differently for different sized screens, the version shown here is for an ipad.  It is a very simple, straight forward design, looking very similar to the home page, but with more cards per page. -- Late into the project the client said they wanted the gallery to auto populate from the blog posts, after discussions we decided to have that as their "stretch goal" and I will work on it after the initial release. --
+The **Gallery page**, it has a responsive design so that it displays differently for different sized screens, the version shown here is for an ipad.  It is a very simple, straight forward design, looking very similar to the home page, but with more cards per page. -- Late into the project the client said they wanted the gallery to auto populate from the blog posts, after discussions we decided to have that as a "stretch goal" and I will work on it after the initial release. --
 
 This is a screenshot of the gallery from an ipad:
 
@@ -93,22 +93,36 @@ This is a screenshot of the gallery from an ipad:
 
 ### About
 
-The about page, it has a responsive design so that it displays differently for different sized screens, the version shown here is for larger screens, in this case the laptop the project was designed and coded on.  It is a very simple design, with an image supplied by the client, however there is a default image available as well.  The text is styled to follow the clients colour palette and other design choices.
+The **About page**, it has a responsive design so that it displays differently for different sized screens, the version shown here is for larger screens, in this case the laptop the project was designed and coded on.  It is a very simple design, with an image supplied by the client, however there is a default image available as well.  The text is styled to follow the clients colour palette and other design choices.
 
 ![larger screen about us screenshot](static/images/readme/about%20screen%20laptop.png)
 
 ### Contact
 
-The about page, it has a responsive design so that it displays differently for different sized screens, __________________________
+The **Contact page**, it has a responsive design so that it displays differently for different sized screens, __________________________
 It's a simple form, the client didn't want anything to complicated, three fields, name, email, and message.  It does what the client wants and allows both registered users and site visitors to contact the client.
 
 ![screenshot of contact form](static/images/readme/)
 
 ### Admin
 
-The Admin panel is one of the most important parts of this site, it is where the clients will be able to enter their posts, and images, monitor user registrations, check any contact requests and reply as needed, monitor and approve or delete comments.
+The **Admin panel** is one of the most important parts of this site, it is where the clients will be able to enter their posts, and images, monitor user registrations, check any contact requests and reply as needed, monitor and approve or delete comments.
 
 ![screenshot of admin panel](static/images/readme/admin%20dashboard.png)
+
+## Stretch goals - future features
+***
+### Client based stretch goals
+- The gallery to auto-populate with images from the gallery posts.
+- The gallery images to pop open into larger versions.
+- To be able to use hashtags to to catogorise images and posts.
+- A search function for posts and tags.
+
+### Developer based
+- Further admin panel customisation.
+- integrating AI to assist with tags.
+- Introducing a mailing list option to assist client.
+- Integrate spelling and grammer check into all forms, consider something that isn't grammerly.
 
 ## Development
 
@@ -116,11 +130,11 @@ Using a database for this project meant I needed a way to track interactions of 
 
 These are the two I have as digital the rest I have scrawled on my notepads:
 
-The 'About' section erd
+The **About** section erd
 
 ![Screenshot 'about' erd](static/images/readme/about%20erd.png)
 
-The 'blog entry' section erd
+The **blog entry** section erd
 
 ![Screenshot 'blog entry' erd](static/images/readme/pst%20erd.png)
 
@@ -169,6 +183,15 @@ This is a list of technologies I used to design this website:
 * [ChatGPT](https://chat.openai.com/) used for spell checking, grammar, readability, and creating blog posts.
 * My own photo's.
 
+This is a list of the technologies I used to help me spell and grammer check, as well as error check code when I ran into issues displaying the gallery:
+***
+* Stack overflow
+* - Nothing specific but helped when I was looking for answers.
+* Cloud with Django - youtube channel specifically the 'Host uploaded images from Django with Cloudinary'
+* - I hadn't added all the information I needed for cloudinary integration, this chanel helped me see that.
+* Code Institute's tutoring service
+* - After a restart I had trouble getting the allowed host to stabilise.
+
 This is a list of technologies I used to manually test both the code and the accessability:
 ***
 * [Colorfilter](https://www.toptal.com/designers/colorfilter/) to check website for colour-blind accessibility.
@@ -194,6 +217,18 @@ There are test files for every app, when they are run there are no issues.
 * - Within the terminal type > **python manage.py test**
 * - hit enter
 
+While conducting these tests I ran into one issue that took me too long to figure out, within the **about** page testing I had forgotten to paste in the correct URL.  Once I found and added the correct URL it passed.
+
+There were no issues detected with the **blog** app.
+
+There were no issues detected with the **contact** app.
+
+While testing **gallery** I had a problem with the cloudinary path, I double and triple checked the path within env.py, settings.py, and both URLs.py, and genuinely wondered why everything was working while I was manually testing things.  Checked everything on the cloudinary site made sure all the details were the same as the env.py.  Again wondering why the manual testing and deployment had worked.  Went back to the tests_views.py and scrolled through each line carefully and found a spelling mistake in this line:
+
+self.assertTemplateUsed(response, 'gallery/gallery.html')
+
+Once corrected the tests passed.
+
 ### Accessibility testing
 
 In order to test the accessibility of the site I run the site through the following tests:
@@ -207,7 +242,7 @@ In order to test the accessibility of the site I run the site through the follow
 * Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
 
 #### Lighthouse output
-I ran lighthouse to check the overall accessibility rating of website, the results below are for both a desktop and a mobile device:
+I ran lighthouse to check the overall accessibility rating of the website, the results below are for both a desktop and a mobile device:
 
 ##### Desktop
 ![Google lighthouse desktop output](static/images/readme/lighthouse%20desk.png)
@@ -240,4 +275,56 @@ I have tested the website on four different browsers:
     - I have used dev-tools to test image links and alt tags, all showed correctly.
     - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
 
+# Deployment
+## Cloning the Repository
 
+* On Github navigate to the repository "https://github.com/Swewi/Werecat-Blog/tree/main"
+* Click "Code" drop down menu - a green button shown right above the file list.
+* Copy the URL of the repository using "HTTPS", "SSH" or "Github CLI".
+* Open Git Bash.
+* Change the current working directory to the location where you want the cloned directory.
+* Type "git clone", and then paste the URL copied earlier.
+* Press enter to create local clone. A clone of the repository will now be created.
+
+* For more details on how to clone the repository in order to create a copy for own use refer to the site:
+[Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+## Forking a Repository
+
+* On Github navigate to the repository "https://github.com/Swewi/Werecat-Blog/tree/main"
+* Click "Fork" located towards top right corner on GitHub page.
+* Select "owner" for the forked repository from the dropdown menu under "owner".
+* It will create forked repo under the same name as original by default. But you can type a name in "Repository name" or add a description in "Description" box.
+* Click on "Create fork". A forked repo is created.
+
+###### Important Information about forking a repository
+* Forking allows you to make any changes without affecting original project. You can send the the suggestions by submitting a pull request. Then the Project Owner can review the pull request before accepting the suggestions and merging them.
+* When you have fork to a repository, you don't have access to files locally on your device, for getting access you will need to clone the forked repository.
+* For more details on how to fork the repo, in order to for example suggest any changes to the project you can:
+[Forking a Repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+## Deploying the app
+
+* The app is deployed from Heroku using the following steps:
+    - Use: pip freeze > requirements.txt to add external libraries to deployed app.
+    - Create Heroku account.
+    - In the top right, click 'New'.
+    - Click 'Create new app'.
+    - Give your app a name and select your region from drop down.
+    - Click 'Create new app'.
+    - Go to 'settings' tab, it's important you do it before deployment.
+    - Scroll down to 'config vars' section and key: PORT and value: 8000.
+    - Scroll down to 'Buildpacks' section.
+    - Click 'Add buildpack'.
+    - Add Python as first dependency and select 'Save changes'.
+    - Add node.js as a second dependency and save again (This is settings section done).
+    - Select 'Deploy' tab at the top.
+    - Select 'Github' from 'Deployment method'.
+    - Type the name given to your project in Github and click 'search'.
+    - Scroll down and select Manual deployment method.
+    - You can also use Auto deployment method to allow the project to update every time you push the code.
+    - You can now click to view the app ready and running.
+
+###### Important Information about forking a repository
+* The web application is displayed and deployed using template provided by Code Institute to test the code.
+* For this project I used Manual deployment method to deploy the current state of the branch, every time I pushed the code from Gitpod.
