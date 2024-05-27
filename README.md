@@ -194,3 +194,50 @@ There are test files for every app, when they are run there are no issues.
 * - Within the terminal type > **python manage.py test**
 * - hit enter
 
+### Accessibility testing
+
+In order to test the accessibility of the site I run the site through the following tests:
+***
+* Colourblind testing:
+* - [Red/Green - red cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=protan)
+* - [Red/Green - green cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=deutan)
+* - [Blue/Yellow - blue cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=tritan)
+* - [Greyscale](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=grey)
+* NVDA screen reader: While using this app I had no problem understanding what was being said.
+* Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
+
+#### Lighthouse output
+I ran lighthouse to check the overall accessibility rating of website, the results below are for both a desktop and a mobile device:
+
+##### Desktop
+![Google lighthouse desktop output](static/images/readme/lighthouse%20desk.png)
+
+##### Mobile
+![Google lighthouse mobile output](static/images/readme/lighthouse%20mob.png)
+
+Overall the accessibilitiy of the site is good.
+
+### Browser testing
+
+I have tested the website on four different browsers:
+* Google Chrome
+    - I have opened every page from every other page, all the links worked.
+    - I have used dev-tools to test image links and alt tags, all showed correctly.
+    - I have tested all the links on the external links page, making sure they conected correctly, all links worked correctly.
+
+* Opera GX
+    - I have opened every page from every other page, all the links worked.
+    - I have used dev-tools to test image links and alt tags, all showed correctly.
+    - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+* Firefox
+    - I have opened every page from every other page, all the links worked.
+    - I have used dev-tools to test image links and alt tags, all showed correctly.
+    - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+* Edge
+    - I have opened every page from every other page, all the links worked.
+    - I have used dev-tools to test image links and alt tags, all showed correctly.
+    - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+
