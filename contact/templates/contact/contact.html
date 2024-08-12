@@ -1,17 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 
 {% block content %}
 <!-- Main content block -->
 
-<!-- Row to center the contact form on the page -->
+<!-- Contact form page -->
 <div class="row justify-content-center">
-    <!-- Column that will hold the contact form, centered and responsive -->
     <div class="col-12 col-md-6 my-5" id="contact-pg">
-        <!-- Heading of the contact page -->
         <h2 id="contact-heading">We love crafting!</h2>
-        <!-- Introduction and description about the blog and crafting specialties -->
         <div id="contact-description">
             <p>Have you seen anything on this blog that takes your fancy? Maybe you have got inspiration from a website
                 and need help? Ask us!</p>
@@ -21,14 +17,14 @@
                 that predates knitting or crochet. We have been known to hand stitch hats, bags, and pouches, and even
                 tunics and dresses!</p>
         </div>
-        <!-- Form to be used for contacting or ordering help -->
-        <form method="post" aria-labelledby="contact-heading" aria-describedby="contact-description">
-            <!-- Django CSRF token for security -->
+        <!-- Form to be used for contacting/ordering -->
+        <form id="contactForm" class="contact-form" method="post" action="{% url 'contact' %}">
             {% csrf_token %}
-            <!-- Render the contact form using crispy_forms for better styling and functionality -->
-            {{ contact_form|crispy }}
-            <!-- Submit button for the form -->
-            <button class="btn btn-secondary" type="submit" aria-label="Submit">Submit</button>
+            {{ contact_form.non_field_errors }}
+            <p id="contact-name" aria-placeholder="Please enter full name here">{{ contact_form.name.label_tag }} {{ contact_form.name }}</p>
+            <p id="contact-email" aria-placeholder="Please enter a valid email here">{{ contact_form.email.label_tag }} {{ contact_form.email }}</p>
+            <p id="contact-msg" aria-placeholder="Please enter your message here">{{ contact_form.message.label_tag }} {{ contact_form.message }}</p>
+            <button id="contact-submit" class="btn btn-secondary" type="submit" aria-label="Submit">Submit</button>
         </form>
     </div>
 </div>

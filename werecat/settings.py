@@ -38,11 +38,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 # Define allowed hosts for the application
 
-ALLOWED_HOSTS = ['8000-swewi-werecatblog-7tdy8qpovj1.ws-eu114.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-swewi-werecatblog-1t3j94kl5xd.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 # Application definition
 
@@ -56,17 +56,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',  # Cloudinary storage for media files
     'django.contrib.sites',
-    'allauth',  # Authentication apps
+    'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'crispy_forms',  # Forms styling
+    'crispy_forms',
     'crispy_bootstrap5',
-    'django_summernote',  # Text editor for admin
-    'cloudinary',  # Cloudinary for image uploads
-    'blog',  # Blog app
-    'about',  # About page app
-    'contact',  # Contact form app
-    'gallery',  # Gallery app
+    'django_summernote',
+    'cloudinary',
+    'blog',
+    'about',
+    'contact',
+    'gallery',
 ]
 
 # Set the ID for the current site (used by 'django.contrib.sites')
