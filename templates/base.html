@@ -37,7 +37,7 @@
     <nav class="navbar navbar-expand-lg navbar-light transparent-bg">
         <div class="container-fluid">
             <!-- Brand Name -->
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Werecat<span class="thin">
+            <a class="navbar-brand mb-3" href="{% url 'home' %}"><span class="brand">Werecat<span class="thin">
                         Industries</span></span></a>
             <!-- Toggle Button for Mobile View -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -46,7 +46,8 @@
             </button>
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0" role="navigation">
+                <ul class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0"
+                    role="navigation">
                     <!-- Home Link -->
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}"
@@ -70,17 +71,24 @@
                             aria-current="{% if request.path == contact_url %}page{% endif %}">Contact</a>
                     </li>
                 </ul>
-                <!-- Admin Panel Access for Admin Users -->
                 {% if user.is_authenticated and user.is_staff %}
                 <a id="btn-adpan" class="btn btn-primary me-3" href="{% url 'admin:index' %}" role="button"
                     aria-label="Admin Panel" aria-haspopup="true" aria-expanded="false">Admin Panel</a>
                 {% endif %}
-                <ul class="navbar-nav justify-content-end align-self-center">
+                <ul class="navbar-nav justify-content-end align-self-center" id="nav-in">
                     <!-- User Authentication Links -->
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
-                            href="{{ logout_url }}">Logout</a>
+                    <li class="nav-item dropdown me-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ user.username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}"
+                                    href="{{ logout_url }}">Logout</a>
+                            </li>
+                        </ul>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -93,7 +101,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                
+
             </div>
         </div>
     </nav>
