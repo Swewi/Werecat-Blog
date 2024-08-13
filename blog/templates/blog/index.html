@@ -6,42 +6,22 @@
 <!-- This block defines the main content of the page -->
 
 <div class="container-fluid">
-    <!-- Bootstrap container to hold the content -->
-
     <div class="row">
-        <!-- Bootstrap row -->
-
-        <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left" aria-label="Blog Entries Column">
-            <!-- Bootstrap column to hold the blog entries -->
-
             <div class="row">
-                <!-- Another Bootstrap row for displaying blog entries -->
-
-                {% for post in post_list %}
                 <!-- Loop through each blog post in the post_list -->
-
+                {% for post in post_list %}
                 <div class="col-md-4 transparent-bg" aria-label="Individual Blog Post" role="article"
                     aria-labelledby="post-title-{{ forloop.counter }}">
-                    <!-- Bootstrap column to display each individual blog post -->
-
                     <div class="card mx-auto h-100 w-75">
-                        <!-- Bootstrap card component for each blog post -->
-
                         <div class="card-body">
-                            <!-- Card body section -->
-
                             <div class="image-container">
-                                <!-- Container for the featured image -->
-
+                                <!-- Image for posts -->
                                 {% if "placeholder" in post.featured_image.url %}
-                                <!-- Check if the featured image is a placeholder -->
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
-                                <!-- Use a default placeholder image if no featured image is provided -->
                                 {% else %}
                                 <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
-                                <!-- Display the featured image -->
                                 {% endif %}
 
                                 <div class="image-flash">

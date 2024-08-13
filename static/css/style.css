@@ -313,10 +313,7 @@ label {
 }
 
 /* Gallery card styling */
-.gallery {
-    background-color: rgb(255, 255, 255, 0.2);
-    /* Slightly transparent white background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.pic {
     border-radius: 10px;
 }
 
