@@ -5,13 +5,12 @@ from django.db import models
 class Contact(models.Model):
     
     """
-    Model to store contact information.
+    Model for contact form/email.
     """
-    
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, blank=True)
     email = models.EmailField()
-    message = models.TextField()
+    message = models.TextField(max_length=500, blank=True)
     read = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Contact request from {self.name}"
+        return str(self.name)

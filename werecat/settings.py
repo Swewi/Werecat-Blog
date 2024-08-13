@@ -160,7 +160,7 @@ EMAIL_HOST = {
 # Trusted origins for CSRF protection
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-swewi-werecatblog-7tdy8qpovj1.ws-eu114.gitpod.io",
+    "https://8000-swewi-werecatblog-1t3j94kl5xd.ws.codeinstitute-ide.net",
     "https://*.herokuapp.com"
 ]
 

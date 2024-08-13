@@ -15,14 +15,15 @@ def contact(request):
             contact = Contact(
                 name=contact_form.cleaned_data['name'],
                 email=contact_form.cleaned_data['email'],
-                message=contact_form.cleaned_data['content']
+                message=contact_form.cleaned_data['message'],
+                read=False
             )
             contact.save()
 
             html = render_to_string('contact/emails/contactform.html', {
                 'name': contact_form.cleaned_data['name'],
                 'email': contact_form.cleaned_data['email'],
-                'content': contact_form.cleaned_data['content']
+                'content': contact_form.cleaned_data['message']
             })
 
             send_mail(
@@ -30,9 +31,9 @@ def contact(request):
                 'This is the message', 
                 'kireebellamy@gmail.com', 
                 ['kireebellamy@gmail.com'], 
-            messages.success(request, 'Success! Your message has been sent!')
             )
-            
+            messages.success(request, 'Success! Your message has been sent!')
+            return redirect('contact')
     else:
         contact_form = ContactForm()
 
@@ -40,4 +41,4 @@ def contact(request):
         request,
         "contact/contact.html",
         {"contact_form": contact_form},
-)
+    )

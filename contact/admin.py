@@ -7,4 +7,4 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Contact)
 class ContactRequestAdmin(admin.ModelAdmin):
 
-    list_display = ('message', 'read',)
+    list_display = ('name', 'email', 'message')
