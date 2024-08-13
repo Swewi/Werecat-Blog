@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 # Define allowed hosts for the application
 
@@ -129,9 +129,7 @@ WSGI_APPLICATION = 'werecat.wsgi.application'
 # Database configuration using dj_database_url for environment variable parsing
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 if 'test' in sys.argv:
