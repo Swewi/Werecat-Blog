@@ -128,21 +128,10 @@ WSGI_APPLICATION = 'werecat.wsgi.application'
 
 # Database configuration using dj_database_url for environment variable parsing
 
-"""
-Retained this information so I can use this data-base after assesment for CV.
-
-https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-"""
-
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
 
 if 'test' in sys.argv:
