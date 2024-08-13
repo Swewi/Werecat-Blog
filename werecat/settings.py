@@ -148,6 +148,15 @@ DATABASES = {
 if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
+# Mailtrap
+
+EMAIL_HOST = {
+    'EMAIL_HOST': os.environ.get('sandbox.smtp.mailtrap.io'),
+    'EMAIL_HOST_USER': os.environ.get("EMAIL_HOST_USER"),
+    'EMAIL_HOST_PASSWORD': os.environ.get("EMAIL_HOST_PASSWORD"),
+    'EMAIL_PORT': os.environ.get("EMAIL_PORT"),
+}
+
 # Trusted origins for CSRF protection
 
 CSRF_TRUSTED_ORIGINS = [

@@ -30,16 +30,14 @@ def contact(request):
                 'This is the message', 
                 'kireebellamy@gmail.com', 
                 ['kireebellamy@gmail.com'], 
-                html_message=html
-            )
-
             messages.success(request, 'Success! Your message has been sent!')
-            return redirect('contact')  # Redirect to avoid form resubmission
+            )
+            
     else:
         contact_form = ContactForm()
 
     return render(
-    request,
-    "contact/contact.html",
-    {"contact_form": contact_form},
+        request,
+        "contact/contact.html",
+        {"contact_form": contact_form},
 )

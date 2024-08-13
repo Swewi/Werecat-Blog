@@ -10,7 +10,8 @@ body {
     font-weight: 400;
     background: linear-gradient(to right, #151515, #9088d3);
     background-clip: text;
-    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    -webkit-text-fill-color: transparent;
+    /* Make text transparent to show gradient */
 }
 
 /* Font style for thinner text elements */
@@ -33,10 +34,50 @@ body {
 
 /* Contact page styling */
 #contact-pg {
+    display: flex;
+    flex-direction: column;
     color: #5fbc40;
     background-color: rgba(25, 25, 25, 0.65);
     border-radius: 10px;
     margin: 0.5rem auto;
+}
+
+label {
+    display: flex;
+    padding: 0 0.5rem;
+    justify-content: flex-start;
+    margin: auto 0;
+}
+
+#contact-msg>label {
+    margin: 0.7rem 0 0 0;
+}
+
+#id_name,
+#id_email,
+#id_message {
+    width: 90%;
+    border: #fff;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    padding: 0.2rem;
+}
+
+#contact-name,
+#contact-email,
+#contact-msg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+#contact-submit {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 0.7rem 5rem;
 }
 
 /* Admin panel button styling */
@@ -69,13 +110,16 @@ body {
     min-height: 100vh;
     background:
         url('../images/background.jpeg') center center / cover no-repeat,
-        #353636; /* Solid color underlay */
+        #353636;
+    /* Solid color underlay */
     padding: 20px 0;
+    background-attachment: fixed;
 }
 
 /* Card component styling */
 .card {
-    background-color: rgb(255, 255, 255, 0.8); /* Slightly transparent white background */
+    background-color: rgb(255, 255, 255, 0.8);
+    /* Slightly transparent white background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
@@ -270,7 +314,8 @@ body {
 
 /* Gallery card styling */
 .gallery {
-    background-color: rgb(255, 255, 255, 0.2); /* Slightly transparent white background */
+    background-color: rgb(255, 255, 255, 0.2);
+    /* Slightly transparent white background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
