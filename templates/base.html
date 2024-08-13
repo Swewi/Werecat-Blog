@@ -46,7 +46,7 @@
             </button>
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="navigation">
+                <ul class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0" role="navigation">
                     <!-- Home Link -->
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}"
@@ -69,6 +69,13 @@
                             href="{{ contact_url }}"
                             aria-current="{% if request.path == contact_url %}page{% endif %}">Contact</a>
                     </li>
+                </ul>
+                <!-- Admin Panel Access for Admin Users -->
+                {% if user.is_authenticated and user.is_staff %}
+                <a id="btn-adpan" class="btn btn-primary me-3" href="{% url 'admin:index' %}" role="button"
+                    aria-label="Admin Panel" aria-haspopup="true" aria-expanded="false">Admin Panel</a>
+                {% endif %}
+                <ul class="navbar-nav justify-content-end align-self-center">
                     <!-- User Authentication Links -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -86,15 +93,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <!-- Admin Panel Access for Admin Users -->
-                {% if user.is_authenticated and user.is_staff %}
-                <a id="btn-adpan" class="btn btn-primary me-3" href="{% url 'admin:index' %}" role="button"
-                    aria-label="Admin Panel" aria-haspopup="true" aria-expanded="false">Admin Panel</a>
-                {% endif %}
-                <!-- Navbar Text -->
-                <span id="tag-comment" class="navbar-text">
-                    We are crafty people living in interesting times!
-                </span>
+                
             </div>
         </div>
     </nav>
@@ -132,7 +131,7 @@
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">
             {% block copyright %}
-            Copyright 2024 Werecat Industries
+            Copyright 2024 Werecat Industries - Code Institute Portfolio Project Four - Fullstack Django/PostgreSQL
             {% endblock %}
         </p>
         <p class="m-0 text-center text-white">Follow us:

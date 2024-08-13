@@ -1,154 +1,96 @@
 {% extends 'base.html' %}
-<!-- Extend the base template -->
-
 {% load static %}
-<!-- Load static files like CSS and JavaScript -->
-
 {% load crispy_forms_tags %}
-<!-- Load crispy forms tags for better form styling -->
-
 {% block content %}
-<!-- Define the main content block -->
 
 <div class="masthead" role="banner" aria-labelledby="masthead-title">
-    <!-- Masthead section -->
     <div class="container">
-        <!-- Bootstrap container for content -->
 
         <div class="row g-0">
-            <!-- Bootstrap row with no gutters -->
             <div class="col-md-6 masthead-text">
-                <!-- Column for masthead text -->
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title" id="masthead-title">{{ post.title }}</h1>
-                <!-- Post author goes before the |, the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <!-- End of column for masthead text -->
 
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- Column for masthead image (visible only on medium and larger screens) -->
                 {% if "placeholder" in post.featured_image.url %}
-                <!-- Check if the featured image is a placeholder -->
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="Placeholder image">
-                <!-- Use a default placeholder image if no featured image is provided -->
                 {% else %}
                 <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
-                <!-- Display the featured image -->
                 {% endif %}
             </div>
         </div>
-        <!-- End of row -->
     </div>
-    <!-- End of container -->
 </div>
-<!-- End of masthead section -->
 
 <div class="container">
-    <!-- Another Bootstrap container for content -->
     <div class="row">
-        <!-- Bootstrap row -->
 
         <div class="col card mb-4  mt-3 left  top">
-            <!-- Column for displaying the post content -->
             <div class="card-body">
-                <!-- Card body for post content -->
                 <article class="card-text">
-                    <!-- Display the post content (safe filter used to render HTML content) -->
                     {{ post.content | safe }}
                 </article>
             </div>
-            <!-- End of card body -->
         </div>
-        <!-- End of column for displaying the post content -->
     </div>
-    <!-- End of row -->
 
     <div class="row">
-        <!-- Bootstrap row -->
         <div class="col-12">
-            <!-- Column for displaying comment count -->
             <strong class="text-secondary">
-                <!-- Icon for comments and the comment count -->
                 <i class="far fa-comments"></i> {{ comment_count }}
             </strong>
         </div>
-        <!-- End of column for comment count -->
         <div class="col-12">
-            <!-- Horizontal line -->
             <hr>
         </div>
     </div>
-    <!-- End of row -->
 
     <div class="row">
-        <!-- Bootstrap row -->
         <div class="col-md-8 card mb-4 mt-3 ">
-            <!-- Column for displaying comments -->
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- Card body for comments -->
                 {% for comment in comments %}
-                <!-- Loop through comments -->
                 <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}"
                     role="article" aria-labelledby="comment-author-{{ comment.id }}">
-                    <!-- Comment item -->
                     <p class="font-weight-bold">
-                        <!-- Comment author and creation date -->
                         {{ comment.author }}
                         <span class="font-weight-normal">
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
                     <div id="comment{{ comment.id }}">
-                        <!-- Display the comment body (linebreaks filter used for formatting) -->
                         {{ comment.body | linebreaks }}
                     </div>
                     {% if not comment.approved and comment.author == user %}
-                    <!-- Message for unapproved comments -->
                     <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <!-- Buttons for authenticated users to delete or edit their own comments -->
                     <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                 </div>
-                <!-- End of comment item -->
                 {% endfor %}
             </div>
-            <!-- End of card body -->
         </div>
-        <!-- End of column for displaying comments -->
 
         <div class="col-md-4 card mb-4 mt-3 ">
-            <!-- Column for leaving comments -->
             <div class="card-body">
-                <!-- Card body for leaving comments -->
                 {% if user.is_authenticated %}
-                <!-- Display form for authenticated users to leave comments -->
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                    <!-- Display the comment form (crispy filter used for better form styling) -->
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <!-- CSRF token for form security -->
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    <!-- Submit button for posting comments -->
                 </form>
                 {% else %}
-                <!-- Message for non-authenticated users -->
                 <p>Log in to leave a comment</p>
                 {% endif %}
             </div>
-            <!-- End of card body -->
         </div>
-        <!-- End of column for leaving comments -->
     </div>
-    <!-- End of row -->
 </div>
-<!-- End of container -->
 
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
@@ -170,17 +112,13 @@
     </div>
 </div>
 {% endblock content %}
-<!-- End of content block -->
 
 {% block copyright %}
 <!-- Copyright block -->
-Copyright 2024 Werecat Industries
+Copyright 2024 Werecat Industries - Code Institute Portfolio Project Four - Fullstack Django/PostgreSQL
 {% endblock %}
-<!-- End of copyright block -->
+
 
 {% block extras %}
-<!-- Additional scripts block -->
 <script src="{% static 'js/comments.js' %}"></script>
-<!-- Include JavaScript file for comment functionality -->
 {% endblock %}
-<!-- End of additional scripts block -->

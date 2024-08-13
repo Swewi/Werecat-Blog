@@ -3,20 +3,17 @@
 {% load cloudinary %}
 
 {% block content %}
-<!-- This block defines the main content of the page -->
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left" aria-label="Blog Entries Column">
             <div class="row">
-                <!-- Loop through each blog post in the post_list -->
                 {% for post in post_list %}
                 <div class="col-md-4 transparent-bg" aria-label="Individual Blog Post" role="article"
                     aria-labelledby="post-title-{{ forloop.counter }}">
                     <div class="card mx-auto h-100 w-75">
                         <div class="card-body">
                             <div class="image-container">
-                                <!-- Image for posts -->
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
@@ -25,82 +22,49 @@
                                 {% endif %}
 
                                 <div class="image-flash">
-                                    <!-- Flash overlay on the featured image -->
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
 
                             <a href="{% url 'post_detail' post.slug %}" class="post-link"
                                 aria-label="Read more about {{ post.title }}">
-                                <!-- Link to the detailed view of the blog post -->
                                 <h2 class="card-title">{{ post.title }}</h2>
-                                <!-- Display the title of the blog post -->
                                 <p class="card-text">{{ post.excerpt }}</p>
-                                <!-- Display the excerpt of the blog post -->
                             </a>
                             <hr>
-                            <!-- Horizontal line separator -->
                             <p class="card-text text-muted h6">{{ post.created_on }}</p>
-                            <!-- Display the creation date of the blog post -->
                         </div>
-                        <!-- End of card body section -->
                     </div>
-                    <!-- End of card component -->
                 </div>
-                <!-- End of column for each blog post -->
-
                 {% if forloop.counter|divisibleby:3 %}
-                <!-- Check if three posts have been displayed -->
-
             </div>
-            <!-- End of row -->
             <div class="row mb-4">
-                <!-- Start a new row for every three posts -->
                 {% endif %}
-                <!-- End of if statement -->
                 {% endfor %}
-                <!-- End of loop through blog posts -->
             </div>
-            <!-- End of row -->
         </div>
-        <!-- End of Blog Entries Column -->
     </div>
-    <!-- End of row -->
 </div>
-<!-- End of container -->
 
 {% if is_paginated %}
 <!-- Pagination section -->
 <nav aria-label="Page navigation" class="mt-4">
-    <!-- Navigation for pagination -->
     <ul class="pagination justify-content-center">
-        <!-- Pagination links -->
         {% if page_obj.has_previous %}
-        <!-- Check if there is a previous page -->
         <li>
-            <!-- Previous page link -->
             <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
         </li>
-        <!-- End of previous page link -->
         {% endif %}
-        <!-- End of if statement -->
         {% if page_obj.has_next %}
-        <!-- Check if there is a next page -->
         <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-        <!-- Next page link -->
         {% endif %}
-        <!-- End of if statement -->
     </ul>
-    <!-- End of pagination links -->
 </nav>
-<!-- End of pagination section -->
 {% endif %}
-<!-- End of if statement for pagination -->
 </div>
-<!-- End of content block -->
 
 {% endblock content %}
 {% block copyright %}
 <!-- Copyright block -->
-Copyright 2024 Werecat Industries
+Copyright 2024 Werecat Industries - Code Institute Portfolio Project Four - Fullstack Django/PostgreSQL
 {% endblock %}
