@@ -131,6 +131,27 @@ label {
     border-radius: 10px;
 }
 
+.edit-comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit-com {
+    color: #5fbc40;
+    background-color: rgba(25, 25, 25, 0.65);
+    border-radius: 10px;
+    margin: 0.5rem auto;
+}
+
+#edit-com-btn {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 0.7rem 5rem;
+}
+
 /* Transparent background utility class */
 .transparent-bg {
     background-color: transparent;
@@ -274,16 +295,6 @@ label {
 #btn-delete:hover,
 #btn-delete:active {
     color: #1d1f1f;
-}
-
-/* Faded text color */
-.faded {
-    color: rgb(172, 175, 175);
-}
-
-/* Approval text color */
-.approval {
-    color: rgb(222, 146, 168);
 }
 
 /* Profile image border radius */

@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -39,6 +40,26 @@ def post_detail(request, slug):
             "comment_form": comment_form
         },
     )
+
+def comment_edit(request, slug, comment_id):
+    post = get_object_or_404(Post, slug=slug, status=1)
+    comment = get_object_or_404(Comment, id=comment_id, post=post)
+
+    if comment.author != request.user:
+        messages.error(request, 'You can only edit your own comments.')
+        return redirect('post_detail', slug=slug)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Comment edited successfully.')
+            return redirect('post_detail', slug=slug)
+    else:
+        form = CommentForm(instance=comment)
+
+    context = {'comment': comment, 'form': form, 'post': post}
+    return render(request, 'blog/edit_comment.html', context)
 
 def comment_delete(request, slug, comment_id):
     queryset = Post.objects.filter(status=1)
