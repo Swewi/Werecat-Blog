@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
 
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -48,7 +49,6 @@ class Comment(models.Model):
         related_name="comments_author"
     )
     body = models.TextField()
-    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
