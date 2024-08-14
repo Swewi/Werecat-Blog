@@ -30,6 +30,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head_extras %}{% endblock %}
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">

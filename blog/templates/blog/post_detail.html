@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+
+{% block head_extras %}
+{{ block.super }}
+<meta name="post-slug" content="{{ post.slug }}">
+{% endblock %}
+
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
@@ -104,7 +110,6 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
-                <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
             </div>
         </div>
     </div>
