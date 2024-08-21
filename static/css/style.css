@@ -269,16 +269,26 @@ label {
 
 /* Signup and edit button styling */
 .btn-signup,
-.btn-edit {
+.btn-edit,
+.btn-page {
     background-color: #188181;
     color: #fff;
 }
 
 /* Signup button hover and active states */
 .btn-signup:hover,
-.btn-signup:active {
+.btn-signup:active,
+.btn-page:hover,
+.btn-page:active {
     background-color: #fff;
     color: #23BBBB;
+}
+
+.btn-page {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.7rem;
 }
 
 /* Link styling */
