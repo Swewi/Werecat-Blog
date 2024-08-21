@@ -1,41 +1,23 @@
 {% extends 'base.html' %}
-<!-- Extend the base template -->
 
 {% load static %}
-<!-- Load static files like CSS and JavaScript -->
-
 {% load crispy_forms_tags %}
-<!-- Load crispy forms tags for better form styling -->
-
 {% block content %}
-<!-- Define the main content block -->
 
 <div class="container mt-5">
-    <!-- Bootstrap container for content with top margin -->
-
     <div class="row">
-        <!-- Bootstrap row -->
-
-        <div id="prof-img" class="col-12 col-md-4 text-center" aria-label="Profile Image" role="img">
-            <!-- Column for the profile image -->
-            {% if "placeholder" in about.profile_image.url %}
-            <!-- Check if the profile image is a placeholder -->
-            <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
-            <!-- Use a default placeholder image if no profile image is provided -->
+        <div id="prof-img" class="col-12 col-md-4 text-center" aria-label="Profile Image" role="img">            
+            {% if "placeholder" in about.profile_image.url %}           
+            <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">            
             {% else %}
-            <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
-            <!-- Display the profile image -->
+            <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">           
             {% endif %}
         </div>
-        <!-- End of column for profile image -->
-
         <div class="col-12 col-md-8 about-pg mx-auto" aria-labelledby="about-heading" role="region">
-            <!-- Column for about page content -->
             <h2 id="about-heading">{{ about.title }}</h2>
             {{ about.content | safe }}
         </div>
     </div>
-
     <div class="row">
         <div class="col text-right">
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
@@ -44,10 +26,8 @@
 </div>
 
 {% endblock content %}
-<!-- End of content block -->
 
 {% block copyright %}
 <!-- Copyright block -->
 Copyright 2024 Werecat Industries - Code Institute Portfolio Project Four - Fullstack Django/PostgreSQL
 {% endblock %}
-<!-- End of copyright block -->
