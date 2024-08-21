@@ -35,15 +35,19 @@ body {
 }
 
 #nav-in a {
-    font-weight: 1000;
-    color: #188181;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1.5px;
     font-size: large;
-    text-shadow: 0 0 5px #000;
-    background-color: rgb(255, 255, 255, 0.8);
+    text-shadow: 0 0 5px #ff0000, 0 0 7px #0000ff, 0 0 8px #151515;
 }
 
-.comment-icon i {
-    color: #fff;
+.comment-icon {
+    color: #000 !important;
+    border: none;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 3px;
 }
 
 /* Styling for request headers */
