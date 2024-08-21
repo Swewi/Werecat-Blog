@@ -42,57 +42,58 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 comment-icon">
             <strong class="text-secondary">
                 <i class="far fa-comments"></i> {{ comment_count }}
             </strong>
         </div>
-        <div class="col-12">
-            <hr>
-        </div>
     </div>
+    <div class="col-12">
+        <hr>
+    </div>
+</div>
 
-    <div class="row gap-2 d-flex justify-content-evenly">
-        <div class="col-md-7 card mb-4 mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="p-2 comments" role="article" aria-labelledby="comment-author-{{ comment.id }}">
-                    <p class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class="font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
-                    </div>
-                    {% if user.is_authenticated and comment.author == user %}
-                    <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn btn-edit btn-signup">Edit</a>
-                    <button class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#deleteModal"
-                        data-comment-id="{{ comment.id }}">Delete</button>
-                    {% endif %}
+<div class="row gap-2 d-flex justify-content-evenly">
+    <div class="col-md-7 card mb-4 mt-3 ">
+        <h3>Comments:</h3>
+        <div class="card-body">
+            {% for comment in comments %}
+            <div class="p-2 comments" role="article" aria-labelledby="comment-author-{{ comment.id }}">
+                <p class="font-weight-bold">
+                    {{ comment.author }}
+                    <span class="font-weight-normal">
+                        {{ comment.created_on }}
+                    </span> wrote:
+                </p>
+                <div id="comment{{ comment.id }}">
+                    {{ comment.body | linebreaks }}
                 </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <div class="col-md-4 card mb-4 mt-3 ">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% else %}
-                <p>Log in to leave a comment</p>
+                {% if user.is_authenticated and comment.author == user %}
+                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn btn-edit btn-signup">Edit</a>
+                <button class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                    data-comment-id="{{ comment.id }}">Delete</button>
                 {% endif %}
             </div>
+            {% endfor %}
         </div>
     </div>
+
+    <div class="col-md-4 card mb-4 mt-3 ">
+        <div class="card-body">
+            {% if user.is_authenticated %}
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% else %}
+            <p>Log in to leave a comment</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
 </div>
 
 <!-- Delete confirmation modal -->

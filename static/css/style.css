@@ -38,7 +38,11 @@ body {
     font-weight: 1000;
     color: #188181;
     font-size: large;
-    text-shadow: none;
+    text-shadow: 0 0 5px #fff;
+}
+
+.comment-icon i {
+    color: #fff;
 }
 
 /* Styling for request headers */
