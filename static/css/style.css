@@ -38,7 +38,8 @@ body {
     font-weight: 1000;
     color: #188181;
     font-size: large;
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 5px #000;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 
 .comment-icon i {
