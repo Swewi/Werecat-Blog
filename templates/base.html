@@ -57,17 +57,17 @@
                 <!-- Gallery Link -->
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == gallery_url %}active{% endif %}" href="{% url 'gallery' %}"
-                        aria-current="{% if request.path == gallery_url %}page{% endif %}">Gallery</a>
+                    aria-current="page{% endif %}">Gallery</a>
                 </li>
                 <!-- About Link -->
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"
-                        aria-current="{% if request.path == about_url %}page{% endif %}">About</a>
+                    aria-current="page{% endif %}">About</a>
                 </li>
                 <!-- Contact Link -->
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}"
-                        aria-current="{% if request.path == contact_url %}page{% endif %}">Contact</a>
+                    aria-current="page{% endif %}">Contact</a>
                 </li>
             </ul>
 
