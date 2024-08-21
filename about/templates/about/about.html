@@ -32,26 +32,16 @@
         <div class="col-12 col-md-8 about-pg mx-auto" aria-labelledby="about-heading" role="region">
             <!-- Column for about page content -->
             <h2 id="about-heading">{{ about.title }}</h2>
-            <!-- Display the title of the about page -->
             {{ about.content | safe }}
-            <!-- Display the content of the about page (safe filter used to render HTML content) -->
         </div>
-        <!-- End of column for about page content -->
     </div>
-    <!-- End of row -->
 
     <div class="row">
-        <!-- Another Bootstrap row -->
         <div class="col text-right">
-            <!-- Column for text alignment -->
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-            <!-- Display the last updated date of the about page content -->
         </div>
-        <!-- End of column for text alignment -->
     </div>
-    <!-- End of row -->
 </div>
-<!-- End of container -->
 
 {% endblock content %}
 <!-- End of content block -->
