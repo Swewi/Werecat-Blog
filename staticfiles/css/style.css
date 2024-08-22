@@ -252,7 +252,7 @@ label {
 /* Post link hover and page link styling */
 .post-link:hover,
 .page-link {
-    color: #1edbc5;
+    color: #0e9585;
 }
 
 /* Post title margin */
@@ -365,6 +365,10 @@ label {
     display: flex;
     align-items: center;
     border-radius: 5px;
+}
+
+.carousel-item {
+    transition: transform 4s ease-in-out;
 }
 
 /* Media Queries */
