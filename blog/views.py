@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.contrib import messages
@@ -19,6 +20,9 @@ def post_detail(request, slug):
     comment_count = post.comments.count()
     
     if request.method == "POST":
+        if not request.user.is_authenticated:
+            return redirect(f'/accounts/login/?next=/post/{slug}/')
+    
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -28,7 +32,8 @@ def post_detail(request, slug):
             messages.success(request, 'Comment submitted successfully')
             return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
-    comment_form = CommentForm()
+    else:
+        comment_form = CommentForm()
 
     return render(
         request,
@@ -41,6 +46,7 @@ def post_detail(request, slug):
         },
     )
 
+@login_required
 def comment_edit(request, slug, comment_id):
     post = get_object_or_404(Post, slug=slug, status=1)
     comment = get_object_or_404(Comment, id=comment_id, post=post)
@@ -61,6 +67,7 @@ def comment_edit(request, slug, comment_id):
     context = {'comment': comment, 'form': form, 'post': post}
     return render(request, 'blog/edit_comment.html', context)
 
+@login_required
 def comment_delete(request, slug, comment_id):
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)

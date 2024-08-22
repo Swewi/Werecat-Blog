@@ -26,13 +26,12 @@ def contact(request):
                 'message': contact_form.cleaned_data['message']
             })
 
-            # Corrected send_mail function
             send_mail(
-                'The contact form subject',  # subject
-                'This is the message',       # plain text message
-                'kireebellamy@gmail.com',    # from_email
-                ['kireebellamy@gmail.com'],  # recipient_list
-                html_message=html            # HTML message
+                'The contact form subject',
+                'This is the message',
+                'kireebellamy@gmail.com',
+                ['kireebellamy@gmail.com'],
+                html_message=html
             )
 
             messages.success(request, 'Success! Your message has been sent!')

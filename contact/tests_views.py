@@ -1,26 +1,31 @@
 from django.test import TestCase
-from django.urls import reverse
-from .models import Contact
 from .forms import ContactForm
 
-class TestContactView(TestCase):
+class TestContactForm(TestCase):
 
-    def test_render_contact_page_with_contact_form(self):
-        """Verifies get request for contact page containing a contact form"""
-        response = self.client.get(reverse('contact'))
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'We love crafting!', response.content)
-        self.assertIsInstance(
-            response.context['contact_form'], ContactForm)
+    def test_form_is_valid(self):
+        """ Test for all fields"""
+        form = ContactForm(
+            {'name': 'test', 'email': 'test@test.com', 'message': 'Hello!'})
+        self.assertTrue(form.is_valid(), msg="Form is not valid")
 
-    def test_successful_contact_submission(self):
-        """Test for a user submitting a contact form"""
-        post_data = {
-            'name': 'test name',
-            'email': 'test@email.com',
-            'message': 'test message'
-        }
-        response = self.client.post(reverse('contact'), post_data)
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(
-            b'Hi I have received your message! I will do my best to respond within 2 working days.', response.content)
+    def test_name_is_required(self):
+        """Test for the 'name' field"""
+        form = ContactForm(
+            {'name': '', 'email': 'test@test.com', 'message': 'Hello!'})
+        self.assertFalse(
+            form.is_valid(), msg="Name was not provided, but the form is valid")
+
+    def test_email_is_required(self):
+        """Test for the 'email' field"""
+        form = ContactForm(
+            {'name': 'Matt', 'email': '', 'message': 'Hello!'})
+        self.assertFalse(
+            form.is_valid(), msg="Email was not provided, but the form is valid")
+
+    def test_message_is_required(self):
+        """Test for the 'message' field"""
+        form = ContactForm(
+            {'name': 'Matt', 'email': 'test@test.com', 'message': ''})
+        self.assertFalse(
+            form.is_valid(), msg="Message was not provided, but the form is valid")

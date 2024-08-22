@@ -1,9 +1,7 @@
 from django.test import TestCase
 from .forms import CommentForm
 
-# Create your tests here.
 class TestCommentForm(TestCase):
-
 
     def test_form_is_valid(self):
         comment_form = CommentForm({'body': 'This is a great post'})
