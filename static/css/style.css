@@ -336,6 +336,9 @@ label {
 /* Profile image border radius */
 #prof-img img {
     border-radius: 20px;
+    width: 80%;
+    height: auto;
+    padding-bottom: 1rem;
 }
 
 /* User page styling */

@@ -8,12 +8,12 @@
     <div class="row">
         <div id="prof-img" class="col-12 col-md-4 text-center" aria-label="Profile Image" role="img">            
             {% if "placeholder" in about.profile_image.url %}           
-            <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">            
+            <img src="{% static 'images/nobody.jpg' %}" alt="placeholder image">            
             {% else %}
-            <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">           
+            <img src="{{ about.profile_image.url }}" alt="{{ about.title }}">           
             {% endif %}
         </div>
-        <div class="col-12 col-md-8 about-pg mx-auto" aria-labelledby="about-heading" role="region">
+        <div class="col-12 col-md-6 about-pg mx-auto" aria-labelledby="about-heading" role="region">
             <h2 id="about-heading">{{ about.title }}</h2>
             {{ about.content | safe }}
         </div>
