@@ -421,7 +421,7 @@ label {
     #contact-name,
     #contact-email,
     #contact-msg {
-        margin-right: 0.6;
+        margin-right: 0.6rem;
         margin-left: 1rem;
     }
 }

@@ -336,6 +336,9 @@ label {
 /* Profile image border radius */
 #prof-img img {
     border-radius: 20px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 /* User page styling */
@@ -418,7 +421,7 @@ label {
     #contact-name,
     #contact-email,
     #contact-msg {
-        margin-right: 0.6;
+        margin-right: 0.6rem;
         margin-left: 1rem;
     }
 }
