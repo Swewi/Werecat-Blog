@@ -189,6 +189,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Summernote Settings
+
+SUMMERNOTE_CONFIG = {
+    'width': '100%',
+    'height': 400,
+    'toolbar': [
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['view', ['fullscreen', 'codeview', 'help']]
+    ],
+    'callbacks': {
+        'onInit': 'function() { console.log("Summernote is initialized."); }'
+    },
+}
+
 # Cloudinary configuration for media storage
 
 CLOUDINARY_STORAGE = {
