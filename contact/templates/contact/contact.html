@@ -4,7 +4,7 @@
 {% block content %}
 
 <!-- Contact form page -->
-<div class="row justify-content-center">
+<div class="row g-0 justify-content-center">
     <div class="col-12 col-md-6 my-5" id="contact-pg">
         <h2 id="contact-heading">We love crafting!</h2>
         <div id="contact-description">
@@ -20,9 +20,18 @@
         <form id="contactForm" class="contact-form" method="post" action="{% url 'contact' %}">
             {% csrf_token %}
             {{ contact_form.non_field_errors }}
-            <p id="contact-name" aria-placeholder="Please enter full name here">{{ contact_form.name.label_tag }} {{ contact_form.name }}</p>
-            <p id="contact-email" aria-placeholder="Please enter a valid email here">{{ contact_form.email.label_tag }} {{ contact_form.email }}</p>
-            <p id="contact-msg" aria-placeholder="Please enter your message here">{{ contact_form.message.label_tag }} {{ contact_form.message }}</p>
+            <p id="contact-name">
+                {{ contact_form.name.label_tag }}
+                {{ contact_form.name }}
+            </p>
+            <p id="contact-email">
+                {{ contact_form.email.label_tag }}
+                {{ contact_form.email }}
+            </p>
+            <p id="contact-msg">
+                {{ contact_form.message.label_tag }}
+                {{ contact_form.message }}
+            </p>
             <button id="contact-submit" class="btn btn-secondary btn-signup" type="submit" aria-label="Submit">Submit</button>
         </form>
     </div>

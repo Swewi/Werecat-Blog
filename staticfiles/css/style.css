@@ -92,9 +92,26 @@ label {
 #contact-email,
 #contact-msg {
     display: flex;
-    justify-content: center;
-    margin-bottom: 0;
+    justify-content: space-between;
+    margin: 0 0.1rem 0.2rem 0;
     width: 100%;
+}
+
+#contact-name input,
+#contact-email input,
+#contact-msg textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 1rem;
+}
+
+#contact-msg textarea {
+    height: 200px;
 }
 
 #contact-submit {
@@ -374,17 +391,52 @@ label {
 /* Media Queries */
 
 /* Adjustments for small and medium-sized devices */
-@media (maz-width: 768px) {
+@media (max-width: 768px) {
     .user-pg {
         width: 50%;
     }
 
     .about-pg {
-        width: 45%;
+        width: 90%;
     }
 
     .col-12.col-md-8.about-pg.mx-auto {
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #contact-name input,
+    #contact-email input,
+    #contact-msg textarea {
+        margin-right: 2rem;
+        margin-left: 0.8rem;
+    }
+
+    #contact-name,
+    #contact-email,
+    #contact-msg {
+        margin-right: 0.6;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 1450px) {
+
+    #contact-name,
+    #contact-email,
+    #contact-msg {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    #contact-name input,
+    #contact-email input,
+    #contact-msg textarea {
+        max-width: 600px;
+        margin-right: 3rem;
+        margin-left: 0.8rem;
     }
 }
