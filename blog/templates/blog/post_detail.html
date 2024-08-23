@@ -53,7 +53,7 @@
         <h3>Comments:</h3>
         <div class="card-body">
             {% for comment in comments %}
-            <div class="p-2 comments" role="article" aria-labelledby="comment-author-{{ comment.id }}">
+            <div class="p-2 comments" role="article" aria-label="Comment by {{ comment.author }}">
                 <p class="font-weight-bold">
                     {{ comment.author }}
                     <span class="font-weight-normal">
