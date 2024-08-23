@@ -1,13 +1,14 @@
+# Werecat Industries Blog
+
 ![Werecat Industries Logo](static/images/readme/cat-eyes1.jpg)
 
-# Werecat Industries Blog
 ## Portfolio Project 4 - Fullstack Dev course taught by Code Institute
 
 ## [Link to live site](https://werecat-blog-46217e65417f.herokuapp.com/)
 
-![Screenshot of Responsive site created by TechSini](static/images/readme/Django-werecat.png)
+![Screenshot of Responsive site created by TechSini](static/images/readme/werecat-blog.png)
 
-### This is Portfolio Project 4 for Full Stack Developer Diploma taught through Code Insititute.
+### This is Portfolio Project 4 for Full Stack Developer Diploma taught through Code Insititute
 
 ## Purpose
 
@@ -29,7 +30,7 @@ The client loved it, and we were asked to proceed.
 
 This is the first page you see when opening the site, it has a responsive design so that it displays differently for different sized screens, the version shown here is for an ipad.
 
-![Home page for an ipad sized screen](static/images/readme/home%20ipad.png)
+![Home page for an ipad sized screen](static/images/readme/home-ipad.png)
 
 #### Navbar
 
@@ -37,37 +38,37 @@ It has a fully functional navbar:
 
 Large screen version
 
-![Large screen navbar including Admin button](static/images/readme/navbar%20inc%20admin.png)
+![Large screen navbar including Admin button](static/images/readme/navbar-inc-admin.png)
 
 Small screen version
 
-![Small screen navbar](static/images/readme/menu%20small%20screen.png)
+![Small screen navbar](static/images/readme/menu-small-screen.png)
 
 You can see that there is an admin button on the right hand side, this allows a user logged in as Admin can access the admin panel directly from the home page.  There is a 'sign out' link, that will be display as follows:
 
-![Sign out screen](static/images/readme/sign%20out%20screen%20-%20large%20laptop.png)
+![Sign out screen](static/images/readme/signout-large-screen.png)
 
 You will recieve a message once you succesfully log out:
 
-![Sign out message](static/images/readme/logout%20alert.png)
+![Sign out message](static/images/readme/logout-alert.png)
 
 After succesfully signing out the sign out button is replaced with a 'register' and 'sign in' link.  If either of these options is clicked you it will re-direct you to the appropiate screen.
 
 The register link opens to show this page, shown here for ipads:
 
-![Sign up/register screen](static/images/readme/signup%20ipad.png)
+![Sign up/register screen](static/images/readme/signup-ipad.png)
 
 The sign-in link opens to show the following page:
 
-![Sign in larger screen](static/images/readme/signin%20screen%20laptop.png)
+![Sign in larger screen](static/images/readme/signin-laptop.png)
 
 The same page for a smaller mobile screen:
 
-![Sign in small screen](static/images/readme/signin%20galaxy%20fold.png)
+![Sign in small screen](static/images/readme/signin-galaxy-fold.png)
 
 After succesfully registering or signing in there will be a message shown to notify you, I have only shown a single version here:
 
-![Sign in alert](static/images/readme/signin%20alert.png)
+![Sign in alert](static/images/readme/signin-alert.png)
 
 #### Body of the page
 
@@ -89,13 +90,13 @@ The **Gallery page**, it has a responsive design so that it displays differently
 
 This is a screenshot of the gallery from an ipad:
 
-![ipad screen of the gallery](static/images/readme/gallery%20ipad.png)
+![ipad screen of the gallery](static/images/readme/gallery-ipad.png)
 
 ### About
 
 The **About page**, it has a responsive design so that it displays differently for different sized screens, the version shown here is for larger screens, in this case the laptop the project was designed and coded on.  It is a very simple design, with an image supplied by the client, however there is a default image available as well.  The text is styled to follow the clients colour palette and other design choices.
 
-![larger screen about us screenshot](static/images/readme/about%20screen%20laptop.png)
+![larger screen about us screenshot](static/images/readme/about-laptop.png)
 
 ### Contact
 
@@ -103,27 +104,31 @@ The **Contact page**, it has a responsive design so that it displays differently
 
 This is the contact page shown on a small mobile screen:
 
-![screenshot of contact form for small mobiles](static/images/readme/contact%20small.png)
+![screenshot of contact form for small mobiles](static/images/readme/contact-small.png)
 
 This is the contact page shown on an ipad:
 
-![screenshot of contact form for ipad](static/images/readme/contact%20larger.png)
+![screenshot of contact form for ipad](static/images/readme/contact-larger.png)
 
 ### Admin
 
 The **Admin panel** is one of the most important parts of this site, it is where the clients will be able to enter their posts, and images, monitor user registrations, check any contact requests and reply as needed, monitor and approve or delete comments.
 
-![screenshot of admin panel](static/images/readme/admin%20dashboard.png)
+![screenshot of admin panel](static/images/readme/admin-dashboard.png)
 
 ## Stretch goals - future features
+
 ***
+
 ### Client based stretch goals
+
 - The gallery to auto-populate with images from the gallery posts.
 - The gallery images to pop open into larger versions.
 - To be able to use hashtags to to catogorise images and posts.
 - A search function for posts and tags.
 
 ### Developer based
+
 - Further admin panel customisation.
 - integrating AI to assist with tags.
 - Introducing a mailing list option to assist client.
@@ -137,73 +142,77 @@ These are the two I have as digital the rest I have scrawled on my notepads:
 
 The **About** section erd
 
-![Screenshot 'about' erd](static/images/readme/about%20erd.png)
+![Screenshot 'about' erd](static/images/readme/about-erd.png)
 
 The **blog entry** section erd
 
-![Screenshot 'blog entry' erd](static/images/readme/pst%20erd.png)
+![Screenshot 'blog entry' erd](static/images/readme/pst-erd.png)
 
 As part of this process I used a kanban board to monitor user stories, and ensure I complete everything the client wanted, with the exception of the 'stretch goals'.  Shown below is a screenshot of the kanban board I created for this project.
 
-![Screenshot of kanban board relavent to this project](static/images/readme/kanban%20board.png)
+![Screenshot of kanban board relavent to this project](static/images/readme/kanban-board.png)
 
 ## Technologies
 
 This is a list of technologies I used while building this site:
 ***
-* Django Framework - version 4.2.13
-* Django allauth - version 0.57.2
-* Django Crispy forms - version 2.1
-* Django Jazzmin - version 3.0.0
-* Django Summernote - version 0.8.20.0
-* gunicorn - version 20.1.0
-* psycopg2 - version 2.9.9
-* cloudinary - version 1.36.0
-* whitenoise - version 5.3.0
-* Bootstrap - version 5.3.x
-* pip - version 24.0
-* python - for the functionality of the inside gubins of the website.
-* HTML  - to accomplish the structure of the website.
-* CSS - to style the website.
-* Javascript - for the functionality of the user visable website.
-* Git - to provide version control (to commit and push code to the repository). 
-* Gitpod - IDE to develop the website.
-* Github - To host the source code.
-* Swewi's kanban board - To monitor user stories and track.
-* Heroku - Used to deploy the project.
-* Google Dev Tools - For page inspection and checking website.
-* Code Institute's Gitpod Template - to generate the workspace for the project.
-* Mural - to make the ERD's for database interactions.
-* [Lorem Ipsum](https://loremipsum.io/) - Creating initial content to check pagination.
-* ElephantSQL - to host the postgres database.
+
+- Django Framework - version 4.2.13
+- Django allauth - version 0.57.2
+- Django Crispy forms - version 2.1
+- Django Jazzmin - version 3.0.0
+- Django Summernote - version 0.8.20.0
+- gunicorn - version 20.1.0
+- psycopg2 - version 2.9.9
+- cloudinary - version 1.36.0
+- whitenoise - version 5.3.0
+- Bootstrap - version 5.3.x
+- pip - version 24.0
+- python - for the functionality of the inside gubins of the website.
+- HTML  - to accomplish the structure of the website.
+- CSS - to style the website.
+- Javascript - for the functionality of the user visable website.
+- Git - to provide version control (to commit and push code to the repository).
+- Gitpod - IDE to develop the website.
+- Github - To host the source code.
+- Swewi's kanban board - To monitor user stories and track.
+- Heroku - Used to deploy the project.
+- Google Dev Tools - For page inspection and checking website.
+- Code Institute's Gitpod Template - to generate the workspace for the project.
+- Mural - to make the ERD's for database interactions.
+- [Lorem Ipsum](https://loremipsum.io/) - Creating initial content to check pagination.
+- ElephantSQL - to host the postgres database.
 
 This is a list of technologies I used to design this website:
 ***
-* [TechSini](https://techsini.com/multi-mockup/) To create mockup image.
-* [TinyJPG](https://tinyjpg.com/) To compress images.
-* [FontAwesome](https://fontawesome.com/) Icons.
-* [Goggle Fonts](https://fonts.google.com/) For website fonts.
-* [Favicon](https://favicon.io/) To create favicon for the website.
-* [Open art AI](https://openart.ai/home) To create the background image.
-* [ChatGPT](https://chat.openai.com/) used for spell checking, grammar, readability, and creating blog posts.
-* My own photo's.
+
+- [TechSini](https://techsini.com/multi-mockup/) To create mockup image.
+- [TinyJPG](https://tinyjpg.com/) To compress images.
+- [FontAwesome](https://fontawesome.com/) Icons.
+- [Goggle Fonts](https://fonts.google.com/) For website fonts.
+- [Favicon](https://favicon.io/) To create favicon for the website.
+- [Open art AI](https://openart.ai/home) To create the background image.
+- [ChatGPT](https://chat.openai.com/) used for spell checking, grammar, readability, and creating blog posts.
+- My own photo's.
 
 This is a list of the technologies I used to help me spell and grammer check, as well as error check code when I ran into issues displaying the gallery:
 ***
-* Stack overflow
-* - Nothing specific but helped when I was looking for answers.
-* Cloud with Django - youtube channel specifically the 'Host uploaded images from Django with Cloudinary'
-* - I hadn't added all the information I needed for cloudinary integration, this chanel helped me see that.
-* Code Institute's tutoring service
-* - After a restart I had trouble getting the allowed host to stabilise.
+
+- Stack overflow
+- - Nothing specific but helped when I was looking for answers.
+- Cloud with Django - youtube channel specifically the 'Host uploaded images from Django with Cloudinary'
+- - I hadn't added all the information I needed for cloudinary integration, this chanel helped me see that.
+- Code Institute's tutoring service
+- - After a restart I had trouble getting the allowed host to stabilise.
 
 This is a list of technologies I used to manually test both the code and the accessability:
 ***
-* [Colorfilter](https://www.toptal.com/designers/colorfilter/) to check website for colour-blind accessibility.
-* [NVDA screen reader](https://www.nvaccess.org/) to access screen reader capabilities on website.
-* Google Chrome's [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to check accessibility.
-* [W3C HTML Markup Validator](https://validator.w3.org/) to check HTML code.
-* [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to check CSS code.
+
+- [Colorfilter](https://www.toptal.com/designers/colorfilter/) to check website for colour-blind accessibility.
+- [NVDA screen reader](https://www.nvaccess.org/) to access screen reader capabilities on website.
+- Google Chrome's [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to check accessibility.
+- [W3C HTML Markup Validator](https://validator.w3.org/) to check HTML code.
+- [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to check CSS code.
 
 ## Testing
 
@@ -218,9 +227,10 @@ Javascript - The errors that came up were warnings about character count.
 ### Automatic testing
 
 There are test files for every app, when they are run there are no issues.
-* In order to run these tests do the following:
-* - Within the terminal type > **python manage.py test**
-* - hit enter
+
+- In order to run these tests do the following:
+- - Within the terminal type > **python manage.py test**
+- - hit enter
 
 While conducting these tests I ran into one issue that took me too long to figure out, within the **about** page testing I had forgotten to paste in the correct URL.  Once I found and added the correct URL it passed.
 
@@ -238,108 +248,119 @@ Once corrected the tests passed.
 
 In order to test the accessibility of the site I run the site through the following tests:
 ***
-* Colourblind testing:
-* - [Red/Green - red cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=protan)
-* - [Red/Green - green cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=deutan)
-* - [Blue/Yellow - blue cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=tritan)
-* - [Greyscale](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=grey)
-* NVDA screen reader: While using this app I had no problem understanding what was being said.
-* Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
+
+- Colourblind testing:
+- - [Red/Green - red cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=protan)
+- - [Red/Green - green cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=deutan)
+- - [Blue/Yellow - blue cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=tritan)
+- - [Greyscale](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=grey)
+- NVDA screen reader: While using this app I had no problem understanding what was being said.
+- Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
 
 #### Lighthouse output
+
 I ran lighthouse to check the overall accessibility rating of the website, the results below are for both a desktop and a mobile device:
 
 ##### Desktop
-![Google lighthouse desktop output](static/images/readme/lighthouse%20desk.png)
+
+![Google lighthouse desktop output](static/images/readme/lighthouse-desk.png)
 
 ##### Mobile
-![Google lighthouse mobile output](static/images/readme/lighthouse%20mob.png)
+
+![Google lighthouse mobile output](static/images/readme/lighthouse-mob.png)
 
 Overall the accessibilitiy of the site is good.
 
 ### Browser testing
 
 I have tested the website on four different browsers:
-* Google Chrome
-    - I have opened every page from every other page, all the links worked.
-    - I have used dev-tools to test image links and alt tags, all showed correctly.
-    - I have tested all the links on the external links page, making sure they conected correctly, all links worked correctly.
 
-* Opera GX
-    - I have opened every page from every other page, all the links worked.
-    - I have used dev-tools to test image links and alt tags, all showed correctly.
-    - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+- Google Chrome
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correctly, all links worked correctly.
 
-* Firefox
-    - I have opened every page from every other page, all the links worked.
-    - I have used dev-tools to test image links and alt tags, all showed correctly.
-    - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+- Opera GX
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
 
-* Edge
-    - I have opened every page from every other page, all the links worked.
-    - I have used dev-tools to test image links and alt tags, all showed correctly.
-    - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+- Firefox
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
 
-# Deployment
+- Edge
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+## Deployment
 
 ### Important point for this project
+
 This is a django project, as such it has been built with the django framework, in order to maintain a level of security for certain variables they stored within a secret file env.py.  This file **IS NOT** stored within the project, it must be recreated if you are starting a new workspace, please ensure you use your own details for this.
 
 ## Cloning the Repository
 
-* On Github navigate to the repository "https://github.com/Swewi/Werecat-Blog/tree/main"
-* Click "Code" drop down menu - a green button shown right above the file list.
-* Copy the URL of the repository using "HTTPS", "SSH" or "Github CLI".
-* Open Git Bash.
-* Change the current working directory to the location where you want the cloned directory.
-* Type "git clone", and then paste the URL copied earlier.
-* Press enter to create local clone. A clone of the repository will now be created.
+- On Github navigate to the repository "<https://github.com/Swewi/Werecat-Blog/tree/main>"
+- Click "Code" drop down menu - a green button shown right above the file list.
+- Copy the URL of the repository using "HTTPS", "SSH" or "Github CLI".
+- Open Git Bash.
+- Change the current working directory to the location where you want the cloned directory.
+- Type "git clone", and then paste the URL copied earlier.
+- Press enter to create local clone. A clone of the repository will now be created.
 
-* For more details on how to clone the repository in order to create a copy for own use refer to the site:
+- For more details on how to clone the repository in order to create a copy for own use refer to the site:
 [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ## Forking a Repository
 
-* On Github navigate to the repository "https://github.com/Swewi/Werecat-Blog/tree/main"
-* Click "Fork" located towards top right corner on GitHub page.
-* Select "owner" for the forked repository from the dropdown menu under "owner".
-* It will create forked repo under the same name as original by default. But you can type a name in "Repository name" or add a description in "Description" box.
-* Click on "Create fork". A forked repo is created.
+- On Github navigate to the repository "<https://github.com/Swewi/Werecat-Blog/tree/main>"
+- Click "Fork" located towards top right corner on GitHub page.
+- Select "owner" for the forked repository from the dropdown menu under "owner".
+- It will create forked repo under the same name as original by default. But you can type a name in "Repository name" or add a description in "Description" box.
+- Click on "Create fork". A forked repo is created.
 
-###### Important Information about forking a repository
-* Forking allows you to make any changes without affecting original project. You can send the the suggestions by submitting a pull request. Then the Project Owner can review the pull request before accepting the suggestions and merging them.
-* When you have fork to a repository, you don't have access to files locally on your device, for getting access you will need to clone the forked repository.
-* For more details on how to fork the repo, in order to for example suggest any changes to the project you can:
+### Important Information about forking a repository
+
+- Forking allows you to make any changes without affecting original project. You can send the the suggestions by submitting a pull request. Then the Project Owner can review the pull request before accepting the suggestions and merging them.
+
+- When you have fork to a repository, you don't have access to files locally on your device, for getting access you will need to clone the forked repository.
+- For more details on how to fork the repo, in order to for example suggest any changes to the project you can:
 [Forking a Repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 ## Deploying the app
 
-* The app is deployed from Heroku using the following steps:
-    - Use: pip freeze > requirements.txt to add external libraries to deployed app.
-    - Create Heroku account.
-    - In the top right, click 'New'.
-    - Click 'Create new app'.
-    - Give your app a name and select your region from drop down.
-    - Click 'Create new app'.
-    - Go to 'settings' tab, it's important you do it before deployment.
-    - Scroll down to 'config vars' section and key: PORT and value: 8000.
-    - Scroll down to 'Buildpacks' section.
-    - Click 'Add buildpack'.
-    - Add Python as first dependency and select 'Save changes'.
-    - Add node.js as a second dependency and save again (This is settings section done).
-    - Select 'Deploy' tab at the top.
-    - Select 'Github' from 'Deployment method'.
-    - Type the name given to your project in Github and click 'search'.
-    - Scroll down and select Manual deployment method.
-    - You can also use Auto deployment method to allow the project to update every time you push the code.
-    - You can now click to view the app ready and running.
+- The app is deployed from Heroku using the following steps:
+  - Use: pip freeze > requirements.txt to add external libraries to deployed app.
+  - Create Heroku account.
+  - In the top right, click 'New'.
+  - Click 'Create new app'.
+  - Give your app a name and select your region from drop down.
+  - Click 'Create new app'.
+  - Go to 'settings' tab, it's important you do it before deployment.
+  - Scroll down to 'config vars' section and key: PORT and value: 8000.
+  - Scroll down to 'Buildpacks' section.
+  - Click 'Add buildpack'.
+  - Add Python as first dependency and select 'Save changes'.
+  - Add node.js as a second dependency and save again (This is settings section done).
+  - Select 'Deploy' tab at the top.
+  - Select 'Github' from 'Deployment method'.
+  - Type the name given to your project in Github and click 'search'.
+  - Scroll down and select Manual deployment method.
+  - You can also use Auto deployment method to allow the project to update every time you push the code.
+  - You can now click to view the app ready and running.
 
-###### Important Information about forking a repository
-* The web application is displayed and deployed using template provided by Code Institute to test the code.
-* For this project I used Manual deployment method to deploy the current state of the branch, every time I pushed the code from Gitpod.
+### Important Information about deploying the app
 
-# Credits
+- The web application is displayed and deployed using template provided by Code Institute to test the code.
 
-* Code Institute's 'Codestar' project.
-* My partner for understanding why I am working at the weekend.
-* My mentor Ronan for understanding why stupid questions are asked.
+- For this project I used Manual deployment method to deploy the current state of the branch, every time I pushed the code from Gitpod, and automatic once I was at the stage of testing live site for interactivity.
+
+## Credits
+
+- Code Institute's 'Codestar' project.
+- My partner for understanding why I am working at the weekend.
+- My mentor Ronan for understanding why stupid questions are asked.
+- My Grandmother that passsed away suddenly while I was completing the project.
