@@ -216,34 +216,6 @@ This is a list of technologies I used to manually test both the code and the acc
 
 ## Testing
 
-I carried out both manual and automatic testing for this project.
-
-### Manual testing
-
-HTML - I used the w3 validator to check the HTML code, while this produced a number of 'errors' they were all relating to having python code integrated into the HTML, I was using the validator to check for any errors I may have introduced through spelling, syntax.  None of the templates I checked had any issues.
-CSS - I used the css validator to check the stylesheet.  There were no errors.
-Javascript - The errors that came up were warnings about character count.
-
-### Automatic testing
-
-There are test files for every app, when they are run there are no issues.
-
-- In order to run these tests do the following:
-- - Within the terminal type > **python manage.py test**
-- - hit enter
-
-While conducting these tests I ran into one issue that took me too long to figure out, within the **about** page testing I had forgotten to paste in the correct URL.  Once I found and added the correct URL it passed.
-
-There were no issues detected with the **blog** app.
-
-There were no issues detected with the **contact** app.
-
-While testing **gallery** I had a problem with the cloudinary path, I double and triple checked the path within env.py, settings.py, and both URLs.py, and genuinely wondered why everything was working while I was manually testing things.  Checked everything on the cloudinary site made sure all the details were the same as the env.py.  Again wondering why the manual testing and deployment had worked.  Went back to the tests_views.py and scrolled through each line carefully and found a spelling mistake in this line:
-
-self.assertTemplateUsed(response, 'gallery/gallery.html')
-
-Once corrected the tests passed.
-
 ### Accessibility testing
 
 In order to test the accessibility of the site I run the site through the following tests:
@@ -270,30 +242,6 @@ I ran lighthouse to check the overall accessibility rating of the website, the r
 ![Google lighthouse mobile output](static/images/readme/lighthouse-mob.png)
 
 Overall the accessibilitiy of the site is good.
-
-### Browser testing
-
-I have tested the website on four different browsers:
-
-- Google Chrome
-  - I have opened every page from every other page, all the links worked.
-  - I have used dev-tools to test image links and alt tags, all showed correctly.
-  - I have tested all the links on the external links page, making sure they conected correctly, all links worked correctly.
-
-- Opera GX
-  - I have opened every page from every other page, all the links worked.
-  - I have used dev-tools to test image links and alt tags, all showed correctly.
-  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
-
-- Firefox
-  - I have opened every page from every other page, all the links worked.
-  - I have used dev-tools to test image links and alt tags, all showed correctly.
-  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
-
-- Edge
-  - I have opened every page from every other page, all the links worked.
-  - I have used dev-tools to test image links and alt tags, all showed correctly.
-  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
 
 ## Deployment
 

@@ -192,3 +192,56 @@ In total I constructed 16 tests to test the majority of the functions within the
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Missing name** | **Missing email** |
 | ![Image 3](static/images/readme/testing/missing-message.png) | **Missing message** |
+
+## Non-page specific Manual testing
+
+| Catagory | Status | Test | Expected Results | Notes|
+| --- | --- | --- | --- | --- |
+| User | Not logged-in | Click on logo or Home Page | Can view/interact with Home/Blog page | Pass |
+| | | Click on Gallery | Can view/interact with Gallery Page | Pass |
+| | | Click on About | Can view/interact with About Page | Pass |
+| | | Click on Contact | Can view/interact with Contact form | Pass |
+| | | Click on a blog post | Be able to read the blog post as a full screen | Pass |
+| | | Click on Register | Can register an account | Pass |
+| | | Click on Login | Can login to a previously registered account | Pass |
+| | Logged-in | Click on a blog-post | Can create/edit/delete your comments | Pass |
+| | | Click on username dropdown | Have the ability to logout of account | Pass |
+| Admin | Logged-in | Click on the Admin Panel button | Gains access to the Admin panel and all associated functionality | Pass |
+| | | Create post or gallery item from admin panel | Click add a new post or gallery item and have it display | Pass |
+| | | Click 'Werecat Blog' in admin panel | Will return you to Home Page | Pass |
+
+---
+
+While testing `gallery` I had a problem with the cloudinary path, I double and triple checked the path within env.py, settings.py, and both URLs.py, and genuinely wondered why everything was working while I was manually testing things.  Checked everything on the cloudinary site made sure all the details were the same as the env.py.  Again wondering why the manual testing and deployment had worked.  Went back to the tests_views.py and scrolled through each line carefully and found a spelling mistake in this line:
+
+self.assertTemplateUsed(response, 'gallery/gallery.html')
+
+Once corrected the tests passed.
+
+## Code Validators
+
+## Browser Testing
+
+I tested four of the most popular browsers:
+
+- Google Chrome
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correctly, all links worked correctly.
+
+- Opera GX
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+- Mozilla Firefox
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+- Edge
+  - I have opened every page from every other page, all the links worked.
+  - I have used dev-tools to test image links and alt tags, all showed correctly.
+  - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
+
+## Accessibility
