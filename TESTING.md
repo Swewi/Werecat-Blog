@@ -86,7 +86,8 @@ In total I constructed 8 tests to test the majority of the functions within the 
 | | test_gallery_attributes | Ensure that the attributes are correctly set when an instance is created | Pass |
 | | test_gallery_image_accepts_none | Confirm that the gallery_image field can be set to None | Pass |
 | | test_save_gallery | Test that an object is saved correctly and  verify the count in the database is updated | Pass |
-| Veiw Testing | | | |
+| | | | |
+| Veiw Testing: | | | |
 | | test_gallery_view_status_code | Ensure that the gallery view returns a 200 status code | Pass |
 | | test_gallery_view_template | Verify that the gallery view uses the correct template | Pass |
 | | test_gallery_view_context | Check if the context passed to the gallery view contains the expected keys | Pass |
@@ -114,12 +115,13 @@ I conducted both automated and manual testing for the about page:
 
 ### Automated Testing About
 
-In total I constructed 8 tests to test the majority of the functions within the Gallery, broken down into 2 sections:
+In total I constructed 2 tests to test the About Page, broken down into 2 sections:
 
 | Catagory | Test description | Expected outcome | Notes |
 | --- | --- | --- | --- |
 | Model Testing: | | | |
 | | setUp | PPrepares the necessary About instance for testing | Pass |
+| | | | |
 | Veiw Testing: | | | |
 | | test_about_view | Ensures the about view correctly returns a 200 status code and includes the expected content | Pass |
 
@@ -135,3 +137,58 @@ In total I constructed 8 tests to test the majority of the functions within the 
 | Status | Test | Expected Results | Notes |
 | --- | --- | --- | --- |
 | Logged out or in | Click on About | Be redirected to the about page | Pass |
+
+## Contact Page Testing
+
+I conducted both automated and manual testing for the Contact page:
+
+### Automated Testing Contact
+
+In total I constructed 16 tests to test the majority of the functions within the Contact Page, broken down into 3 sections:
+
+| Catagory | Test description | Expected outcome | Notes |
+| --- | --- | --- | --- |
+| Model Testing: | | | |
+| | test_create_contact | verifies that a Contact instance can be created and verified successfully | Pass |
+| | test_str_representation | ensures that the string representation is formatted correctly | Pass |
+| | test_blank_name_and_message | checks behavior of model when the name/message fields are blank | Pass |
+| | test_email_validation | validates if email field is correctly checked by validation | Pass |
+| | test_default_read_status | confirms the default value for read is set correctly | Pass |
+| | test_update_read_status | verifies the read status can be updated and saved correctly | Pass |
+| | | | |
+| Views Testing: | | | |
+| | test_form_is_valid | checks if form is valid when all required fields are correct | Pass |
+| | test_name_is_required | verifies the form correctly checks the requirement for name field | Pass |
+| | test_email_is_required | ensures the form correctly checks the requirement for email field | Pass |
+| | test_message_is_required | verifies the form correctly checks the requirement for message field | Pass |
+| | | | |
+|  Form Testing: | | | |
+| | test_form_fields | ensures the form contains only expected fields | Pass |
+| | test_form_is_valid | checks the form is valid when all required fields are provided with appropriate data | Pass |
+| | test_name_field | validates name field, checking correct handling of empty and excessively long input | Pass |
+| | test_email_field | validation rules for email field, including required and format | Pass |
+| | test_message_field | validates message field, including required input type | Pass |
+| | test_form_widgets | checks that correct widgets are used for each field in the form | Pass |
+
+---
+
+| ![Image 1](static/images/readme/testing/contact-tests.png) | ![Image 2](static/images/readme/testing/contact-model-tests.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Overall Contact Test output** | **Contact Model Test Output** |
+| ![Image 3](static/images/readme/testing/contact-form-tests.png) | ![Image 4](static/images/readme/testing/contact-view-tests.png) |
+| **Contact Form Test Output** | **Contact Veiw Test Output** |
+
+### Manual Testing Contact
+
+| Status | Test | Expected Results | Notes |
+| --- | --- | --- | --- |
+| Logged out or in | Click on Contact | Redirects to Contact Form | Pass |
+| | All fields entered correctly | Mail sent successfully to Admin address | Pass |
+| | Missing name | Alert pops up and can't submit message | Pass |
+| | Missing email | Alert pops up and can't submit message | Pass |
+| | Missing message | Alert pops up and can't submit message | Pass |
+
+| ![Image 1](static/images/readme/testing/missing-name.png) | ![Image 2](static/images/readme/testing/missing-email.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Missing name** | **Missing email** |
+| ![Image 3](static/images/readme/testing/missing-message.png) | **Missing message** |
