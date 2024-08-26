@@ -4,7 +4,7 @@
 
 I conducted both automated and manual testing for the blog posts/comments page:
 
-### Automated Testing:
+### Automated Testing Blog
 
 In total I constructed 21 tests to test the majority of the functions within the Blog, broken down into 3 sections:
 
@@ -51,5 +51,87 @@ In total I constructed 21 tests to test the majority of the functions within the
 | ![Image 3](static/images/readme/testing/blog-form-test.png) | ![Image 4](static/images/readme/testing/blog-veiws-test.png) |
 | **Blog Form Test Output** | **Blog Veiw Test Output** |
 
-### Manual Testing:
+### Manual Testing Blog
 
+| Status | Test | Expected Result | Notes |
+| --- | --- | --- | --- |
+| Logged Out | Click on logo or 'Home' | Redirect to the homepage/blog page | Pass |
+| | Click on a post | Opens the post to full page for easy reading | Pass |
+| | Trying to interact with the comments | No options available, but msg pointing out login/register to interact | Pass |
+| Logged In | Trying to interact with comments | Can add a comment to blog post | Pass |
+| | Clicking the 'edit' button on your comment/s | Opens the comment to allow for editing | Pass |
+| | Clicking the 'delete' button on your comment/s | Opens warning for deletion | Pass |
+| | Interacting with someone elses comment | No options available | Pass |
+
+---
+
+| ![Image 1](static/images/readme/testing/comment-interaction-nonlog.png) | ![Image 2](static/images/readme/testing/comment-interaction-logged.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Not logged in user** | **Logged in user** |
+| ![Image 3](static/images/readme/testing/comment-interaction-edit-logged.png) | ![Image 4](static/images/readme/testing/comment-interaction-delete-logged.png) |
+| **Editable by logged in user** | **Deletable by logged in user** |
+
+## Gallery Page Testing
+
+I conducted both automated and manual testing for the gallery page:
+
+### Automated Testing Gallery
+
+In total I constructed 8 tests to test the majority of the functions within the Gallery, broken down into 2 sections:
+
+| Catagory | Test description | Expected outcome | Notes |
+| --- | --- | --- | --- |
+| Model Testing: | | | |
+| Gallery Model Attribute Tests | | | |
+| | test_gallery_attributes | Ensure that the attributes are correctly set when an instance is created | Pass |
+| | test_gallery_image_accepts_none | Confirm that the gallery_image field can be set to None | Pass |
+| | test_save_gallery | Test that an object is saved correctly and  verify the count in the database is updated | Pass |
+| Veiw Testing | | | |
+| | test_gallery_view_status_code | Ensure that the gallery view returns a 200 status code | Pass |
+| | test_gallery_view_template | Verify that the gallery view uses the correct template | Pass |
+| | test_gallery_view_context | Check if the context passed to the gallery view contains the expected keys | Pass |
+| | test_gallery_view_items | Test that gallery items are displayed correctly in the view | Pass |
+| | test_gallery_view_image_urls | Verify that image URLs for items are correctly included in the view's response | Pass |
+
+---
+
+| ![Image 1](static/images/readme/testing/gallery-tests.png) | ![Image 2](static/images/readme/testing/gallery-models-test.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Overall Gallery Test output** | **Gallery Model Test Output** |
+| ![Image 3](static/images/readme/testing/gallery-veiws-test.png) | **Gallery Veiw Test Output** |
+
+### Manual Testing Gallery
+
+| Status | Test | Expected Results | Notes |
+| --- | --- | --- | --- |
+| Logged out or in | Click on Gallery | Be redirected to the gallery page | Pass |
+| | Carousel of images scrolls automatically | Watch the images scroll past | Pass |
+| | Forwards/backwards keys on carousel for manual over-ride | Click the forward or back arrows to move to a new page/previous page | Pass |
+
+## About Page Testing
+
+I conducted both automated and manual testing for the about page:
+
+### Automated Testing About
+
+In total I constructed 8 tests to test the majority of the functions within the Gallery, broken down into 2 sections:
+
+| Catagory | Test description | Expected outcome | Notes |
+| --- | --- | --- | --- |
+| Model Testing: | | | |
+| | setUp | PPrepares the necessary About instance for testing | Pass |
+| Veiw Testing: | | | |
+| | test_about_view | Ensures the about view correctly returns a 200 status code and includes the expected content | Pass |
+
+---
+
+| ![Image 1](static/images/readme/testing/about-tests.png) | ![Image 2](static/images/readme/testing/about-model-test.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Overall About Test output** | **About Model Test Output** |
+| ![Image 3](static/images/readme/testing/about-view-test.png) | **About Veiw Test Output** |
+
+### Manual Testing About
+
+| Status | Test | Expected Results | Notes |
+| --- | --- | --- | --- |
+| Logged out or in | Click on About | Be redirected to the about page | Pass |

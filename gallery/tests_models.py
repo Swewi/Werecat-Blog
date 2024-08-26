@@ -2,18 +2,6 @@ from django.test import TestCase
 from unittest.mock import patch
 from .models import Gallery
 
-@patch('cloudinary.uploader.upload')
-def test_gallery_image_field(self, mock_upload):
-    """Test that gallery_image field accepts valid image data"""
-    mock_upload.return_value = {'url': 'http://example.com/valid_image.jpg'}
-    valid_image = 'valid_image.jpg'
-    gallery = Gallery.objects.create(
-        name="Test Gallery",
-        description="Test Description",
-        gallery_image=valid_image
-    )
-    self.assertEqual(gallery.gallery_image.url, 'http://example.com/valid_image.jpg')
-
 class GalleryModelTest(TestCase):
     def setUp(self):
         self.gallery = Gallery.objects.create(

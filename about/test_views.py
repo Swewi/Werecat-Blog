@@ -4,13 +4,6 @@ from .models import About
 
 class TestAboutView(TestCase):
 
-    def setUp(self):
-        """Creates about me content"""
-        self.about_content = About.objects.create(
-            title="About Me",
-            content="This is about me."
-        )
-
     def test_about_view(self):
         response = self.client.get(reverse('about'))
         self.assertEqual(response.status_code, 200)

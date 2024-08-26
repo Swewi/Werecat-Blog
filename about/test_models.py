@@ -11,10 +11,3 @@ class TestAboutView(TestCase):
             profile_image="path/to/image.jpg",  
             content="This is about me."
         )
-
-    def test_about_view(self):
-        """Test the about view."""
-        response = self.client.get(reverse('about'))
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, self.about_content.title)
-        self.assertContains(response, self.about_content.content)
