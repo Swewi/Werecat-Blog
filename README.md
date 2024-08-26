@@ -216,6 +216,8 @@ This is a list of technologies I used to manually test both the code and the acc
 
 ## Testing
 
+Please see [TESTING.md](TESTING.md) for all testing data.
+
 ### Accessibility testing
 
 In order to test the accessibility of the site I run the site through the following tests:

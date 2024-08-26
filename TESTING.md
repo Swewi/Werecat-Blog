@@ -1,5 +1,7 @@
 # Werecat Blog Testing
 
+Return to [README](README.md).
+
 ## Blog Page Testing
 
 I conducted both automated and manual testing for the blog posts/comments page:
