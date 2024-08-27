@@ -391,6 +391,19 @@ label {
     transition: transform 4s ease-in-out;
 }
 
+footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    outline: none;
+    transform: scale(3);
+    color: #eae333;
+}
+
 /* Media Queries */
 
 /* Adjustments for small and medium-sized devices */

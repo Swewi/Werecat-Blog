@@ -39,39 +39,43 @@
             <a class="navbar-brand mb-3" href="{% url 'home' %}">
                 <span class="brand">Werecat<span class="thin"> Industries</span></span>
             </a>
-    
+
             <!-- Toggle Button for Mobile View -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0">
                     <!-- Home Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     <!-- Gallery Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == gallery_url %}active" aria-current="page{% endif %}" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link {% if request.path == gallery_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'gallery' %}">Gallery</a>
                     </li>
                     <!-- About Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" href="{% url 'about' %}">About</a>
+                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'about' %}">About</a>
                     </li>
                     <!-- Contact Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
-    
+
                 {% if user.is_authenticated and user.is_staff %}
                 <a id="btn-adpan" class="btn btn-primary me-3" href="{% url 'admin:index' %}" role="button"
                     aria-label="Admin Panel">Admin Panel</a>
                 {% endif %}
-    
+
                 <ul class="navbar-nav justify-content-end align-self-center" id="nav-in">
                     <!-- User Authentication Links -->
                     {% if user.is_authenticated %}
@@ -89,7 +93,8 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{{ signup_url }}">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                            href="{{ signup_url }}">
                             Register</a>
                     </li>
                     <li class="nav-item">
@@ -101,8 +106,8 @@
             </div>
         </div>
     </nav>
-    
-    
+
+
     <!-- Displaying Django Messages -->
     <div class="container user-pg">
         <div class="row">
@@ -117,12 +122,12 @@
     </div>
 
     <!-- Main Content Area -->
-<main class="flex-shrink-0 transparent-bg">
-    <!-- Dynamic Content Block -->
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
-</main>
+    <main class="flex-shrink-0 transparent-bg">
+        <!-- Dynamic Content Block -->
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
@@ -131,11 +136,23 @@
             Copyright 2024 Werecat Industries - Code Institute Portfolio Project Four - Fullstack Django/PostgreSQL
             {% endblock %}
         </p>
-        <p class="m-0 text-center text-white">Follow us:
-            <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center text-white social-links">Follow us:
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit the Werecat Facebook page (opens in a new tab)"><i
+                    class="fab fa-facebook-square ms-3"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Follow the Werecat X feed (opens in a new tab)"><i
+                    class="fab fa-twitter-square ms-3"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Visit the Werecat Instagram page (opens in a new tab)"><i
+                    class="fab fa-instagram-square ms-3"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                aria-label="Visit the Werecat Youtube channel (opens in a new tab)"><i
+                    class="fab fa-youtube-square ms-3"></i>
+            </a>
         </p>
     </footer>
 
