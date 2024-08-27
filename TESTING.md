@@ -103,7 +103,8 @@ In total I constructed 8 tests to test the majority of the functions within the 
 | ![Total gallery app tests](static/images/readme/testing/gallery-tests.png) | ![Gallery app model tests](static/images/readme/testing/gallery-models-test.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Overall Gallery Test output** | **Gallery Model Test Output** |
-| ![Gallery app view tests](static/images/readme/testing/gallery-veiws-test.png) | **Gallery View Test Output** |
+| ![Gallery app view tests](static/images/readme/testing/gallery-veiws-test.png) | |
+| **Gallery View Test Output** | |
 
 ### Manual Testing Gallery
 
@@ -134,7 +135,8 @@ In total I constructed 2 tests to test the About Page, broken down into 2 sectio
 | ![Total about app tests](static/images/readme/testing/about-tests.png) | ![About app model tests](static/images/readme/testing/about-model-test.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Overall About Test output** | **About Model Test Output** |
-| ![About app view tests](static/images/readme/testing/about-view-test.png) | **About View Test Output** |
+| ![About app view tests](static/images/readme/testing/about-view-test.png) | |
+| **About View Test Output** | |
 
 ### Manual Testing About
 
@@ -195,7 +197,8 @@ In total I constructed 16 tests to test the majority of the functions within the
 | ![Empty name field](static/images/readme/testing/missing-name.png) | ![Empty email field](static/images/readme/testing/missing-email.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Missing name** | **Missing email** |
-| ![Empty message field](static/images/readme/testing/missing-message.png) | **Missing message** |
+| ![Empty message field](static/images/readme/testing/missing-message.png) | |
+| **Missing message** | |
 
 ## Non-page specific Manual testing
 
@@ -281,13 +284,24 @@ I tested four of the most commonly used browsers:
 
 In order to test the accessibility of the site I run the site through the following tests:
 
-- Colourblind testing:
+### Colourblind and low vision testing
+
 - - [Red/Green - red cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=protan)
 - - [Red/Green - green cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=deutan)
 - - [Blue/Yellow - blue cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=tritan)
 - - [Greyscale](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=grey)
-- NVDA screen reader: While using this app I had no problem understanding what was being said.
+- NVDA screen reader: While using this program I had no problem understanding what was being said, and it was clearly reading extra information.
 - Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
+
+### Wave output
+
+I used WAVE to spot check each page, and get a detailed rundown of any accessibility issues, these were then fixed and rechecked, while doing this I discovered missing links, redundant links, low contrast, and a repeated warning with lack of subheadings.
+
+| ![WAVE home page](static/images/readme/testing/wave-home.png) | ![WAVE gallery page](static/images/readme/testing/wave-gallery.png) | ![WAVE about page](static/images/readme/testing/wave-about.png) | ![WAVE contact page](static/images/readme/testing/wave-contact.png) |
+|:-------------------------------------------:|:-------------------------------------------:| :-------------------------------------------:|:-------------------------------------------:|
+| **WAVE output for home page** | **WAVE output for gallery page** | **WAVE output for about page** | **WAVE output for contact page** |
+| ![WAVE register page](static/images/readme/testing/wave-register.png) | ![WAVE login page](static/images/readme/testing/wave-login.png) | ![WAVE post](static/images/readme/testing/wave-post.png) | |
+ | **WAVE output for register page** | **WAVE output for login form** | **WAVE output for blog post** | |
 
 ### Lighthouse output
 
@@ -295,10 +309,12 @@ I ran lighthouse to check the overall accessibility rating of the website, the r
 
 #### Desktop
 
-![Google lighthouse desktop output](static/images/readme/lighthouse-desk.png)
+![Google lighthouse desktop output](static/images/readme/testing/lighthouse-desk.png)
 
 #### Mobile
 
-![Google lighthouse mobile output](static/images/readme/lighthouse-mob.png)
+![Google lighthouse mobile output](static/images/readme/testing/lighthouse-mob.png)
 
 Overall the accessibilitiy of the site is good.
+
+Return to [README](README.md).
