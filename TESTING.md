@@ -247,6 +247,12 @@ I have run the style.css through the W3C CSS Validation Service, there were no p
 
 ![W3C CSS validation](static/images/readme/testing/CSS-validator.png)
 
+### Javascript Validator
+
+I have used ESlint to check the .js files used across the site, there were no problems.
+
+![ESlint javascript validation](static/images/readme/testing/eslint-javascript%20output.png)
+
 ## Browser Testing
 
 I tested four of the most popular browsers:

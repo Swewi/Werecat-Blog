@@ -217,6 +217,7 @@ This is a list of technologies I used to manually test both the code and the acc
 - [WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/) used to spot check individual pages.
 - [W3C HTML Markup Validator](https://validator.w3.org/) to check HTML code.
 - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to check CSS code.
+- [ESlint javascript validator](https://eslint.org/) to check javascript code.
 
 ## Testing
 
