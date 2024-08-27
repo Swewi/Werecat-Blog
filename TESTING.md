@@ -36,6 +36,7 @@ In total I constructed 21 tests to test the majority of the functions within the
 | | test_post_list_page | Ensures that the home view (post list) loads correctly and displays posts | Pass |
 | | test_post_list_pagination | Tests pagination on the post list page | Pass |
 | | test_post_detail_with_non_existent_slug | Verifies that accessing a post with a non-existent slug returns a 404 error | Pass |
+| | | | |
 | Comment Submission and Editing | | | |
 | | test_successful_comment_submission | Verifies that a logged-in user can successfully submit a comment | Pass |
 | | test_comment_submission_without_login | Ensures that unauthenticated users cannot submit comments and are redirected to the login page | Pass |
@@ -47,11 +48,11 @@ In total I constructed 21 tests to test the majority of the functions within the
 
 ---
 
-| ![Image 1](static/images/readme/testing/blog-tests.png) | ![Image 2](static/images/readme/testing/blog-models-test.png) |
+| ![Total Blog app tests](static/images/readme/testing/blog-tests.png) | ![Blog app model tests](static/images/readme/testing/blog-models-test.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Overall Blog Test output** | **Blog Model Test Output** |
-| ![Image 3](static/images/readme/testing/blog-form-test.png) | ![Image 4](static/images/readme/testing/blog-veiws-test.png) |
-| **Blog Form Test Output** | **Blog Veiw Test Output** |
+| ![Blog app form tests](static/images/readme/testing/blog-form-test.png) | ![Blog app veiw tests](static/images/readme/testing/blog-veiws-test.png) |
+| **Blog Form Test Output** | **Blog View Test Output** |
 
 ### Manual Testing Blog
 
@@ -60,6 +61,7 @@ In total I constructed 21 tests to test the majority of the functions within the
 | Logged Out | Click on logo or 'Home' | Redirect to the homepage/blog page | Pass |
 | | Click on a post | Opens the post to full page for easy reading | Pass |
 | | Trying to interact with the comments | No options available, but msg pointing out login/register to interact | Pass |
+| | | | |
 | Logged In | Trying to interact with comments | Can add a comment to blog post | Pass |
 | | Clicking the 'edit' button on your comment/s | Opens the comment to allow for editing | Pass |
 | | Clicking the 'delete' button on your comment/s | Opens warning for deletion | Pass |
@@ -67,10 +69,10 @@ In total I constructed 21 tests to test the majority of the functions within the
 
 ---
 
-| ![Image 1](static/images/readme/testing/comment-interaction-nonlog.png) | ![Image 2](static/images/readme/testing/comment-interaction-logged.png) |
+| ![not logged in comment](static/images/readme/testing/comment-interaction-nonlog.png) | ![logged in user comments](static/images/readme/testing/comment-interaction-logged.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Not logged in user** | **Logged in user** |
-| ![Image 3](static/images/readme/testing/comment-interaction-edit-logged.png) | ![Image 4](static/images/readme/testing/comment-interaction-delete-logged.png) |
+| ![Edit screen comments](static/images/readme/testing/comment-interaction-edit-logged.png) | ![Delete comment](static/images/readme/testing/comment-interaction-delete-logged.png) |
 | **Editable by logged in user** | **Deletable by logged in user** |
 
 ## Gallery Page Testing
@@ -98,10 +100,10 @@ In total I constructed 8 tests to test the majority of the functions within the 
 
 ---
 
-| ![Image 1](static/images/readme/testing/gallery-tests.png) | ![Image 2](static/images/readme/testing/gallery-models-test.png) |
+| ![Total gallery app tests](static/images/readme/testing/gallery-tests.png) | ![Gallery app model tests](static/images/readme/testing/gallery-models-test.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Overall Gallery Test output** | **Gallery Model Test Output** |
-| ![Image 3](static/images/readme/testing/gallery-veiws-test.png) | **Gallery Veiw Test Output** |
+| ![Gallery app view tests](static/images/readme/testing/gallery-veiws-test.png) | **Gallery View Test Output** |
 
 ### Manual Testing Gallery
 
@@ -129,10 +131,10 @@ In total I constructed 2 tests to test the About Page, broken down into 2 sectio
 
 ---
 
-| ![Image 1](static/images/readme/testing/about-tests.png) | ![Image 2](static/images/readme/testing/about-model-test.png) |
+| ![Total about app tests](static/images/readme/testing/about-tests.png) | ![About app model tests](static/images/readme/testing/about-model-test.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Overall About Test output** | **About Model Test Output** |
-| ![Image 3](static/images/readme/testing/about-view-test.png) | **About Veiw Test Output** |
+| ![About app view tests](static/images/readme/testing/about-view-test.png) | **About View Test Output** |
 
 ### Manual Testing About
 
@@ -174,11 +176,11 @@ In total I constructed 16 tests to test the majority of the functions within the
 
 ---
 
-| ![Image 1](static/images/readme/testing/contact-tests.png) | ![Image 2](static/images/readme/testing/contact-model-tests.png) |
+| ![Total contact app tests](static/images/readme/testing/contact-tests.png) | ![Contact app model tests](static/images/readme/testing/contact-model-tests.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Overall Contact Test output** | **Contact Model Test Output** |
-| ![Image 3](static/images/readme/testing/contact-form-tests.png) | ![Image 4](static/images/readme/testing/contact-view-tests.png) |
-| **Contact Form Test Output** | **Contact Veiw Test Output** |
+| ![Contact app form tests](static/images/readme/testing/contact-form-tests.png) | ![Contact app view tests](static/images/readme/testing/contact-view-tests.png) |
+| **Contact Form Test Output** | **Contact View Test Output** |
 
 ### Manual Testing Contact
 
@@ -190,10 +192,10 @@ In total I constructed 16 tests to test the majority of the functions within the
 | | Missing email | Alert pops up and can't submit message | Pass |
 | | Missing message | Alert pops up and can't submit message | Pass |
 
-| ![Image 1](static/images/readme/testing/missing-name.png) | ![Image 2](static/images/readme/testing/missing-email.png) |
+| ![Empty name field](static/images/readme/testing/missing-name.png) | ![Empty email field](static/images/readme/testing/missing-email.png) |
 |:-------------------------------------------:|:-------------------------------------------:|
 | **Missing name** | **Missing email** |
-| ![Image 3](static/images/readme/testing/missing-message.png) | **Missing message** |
+| ![Empty message field](static/images/readme/testing/missing-message.png) | **Missing message** |
 
 ## Non-page specific Manual testing
 
@@ -208,6 +210,7 @@ In total I constructed 16 tests to test the majority of the functions within the
 | | | Click on Login | Can login to a previously registered account | Pass |
 | | Logged-in | Click on a blog-post | Can create/edit/delete your comments | Pass |
 | | | Click on username dropdown | Have the ability to logout of account | Pass |
+| | | | | |
 | Admin | Logged-in | Click on the Admin Panel button | Gains access to the Admin panel and all associated functionality | Pass |
 | | | Create post or gallery item from admin panel | Click add a new post or gallery item and have it display | Pass |
 | | | Click 'Werecat Blog' in admin panel | Will return you to Home Page | Pass |
@@ -221,6 +224,28 @@ self.assertTemplateUsed(response, 'gallery/gallery.html')
 Once corrected the tests passed.
 
 ## Code Validators
+
+### HTML Validation
+
+I have tested several pages of the app to check if the HTML passes the W3C Markup Validation Service, other than a random hanging `div` that had been missed when fixing something, the other issue I had was miss used aria-labelledby that I went through and corrected.
+
+| ![W3C markup validator post](static/images/readme/testing/markup-validator-post-with-comments.png) | ![W3C markup validator gallery](static/images/readme/testing/markup-validator-gallery.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Validator result for blog post** | **Validator result for gallery page** |
+| ![W3C markup validator about](static/images/readme/testing/markup-validator-about.png) | ![W3C markup validator contact form](static/images/readme/testing/markup-validator-contact-form.png) |
+| **Validator result for about page** | **Validator result for contact form** |
+
+While testing the pagination of the blog posts I have run into a single warning:
+
+![W3C markup validator page 2 - warning](static/images/readme/testing/markup-validator-page2-warning.png)
+
+I have submitted a report because I feel like this is an acceptable usage of **aria-label**
+
+### CSS Validation
+
+I have run the style.css through the W3C CSS Validation Service, there were no problems.
+
+![W3C CSS validation](static/images/readme/testing/CSS-validator.png)
 
 ## Browser Testing
 
@@ -247,3 +272,27 @@ I tested four of the most popular browsers:
   - I have tested all the links on the external links page, making sure they conected correectly, all links worked correctly.
 
 ## Accessibility
+
+In order to test the accessibility of the site I run the site through the following tests:
+
+- Colourblind testing:
+- - [Red/Green - red cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=protan)
+- - [Red/Green - green cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=deutan)
+- - [Blue/Yellow - blue cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=tritan)
+- - [Greyscale](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=grey)
+- NVDA screen reader: While using this app I had no problem understanding what was being said.
+- Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
+
+### Lighthouse output
+
+I ran lighthouse to check the overall accessibility rating of the website, the results below are for both a desktop and a mobile device:
+
+#### Desktop
+
+![Google lighthouse desktop output](static/images/readme/lighthouse-desk.png)
+
+#### Mobile
+
+![Google lighthouse mobile output](static/images/readme/lighthouse-mob.png)
+
+Overall the accessibilitiy of the site is good.

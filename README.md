@@ -150,7 +150,9 @@ The **blog entry** section erd
 
 As part of this process I used a kanban board to monitor user stories, and ensure I complete everything the client wanted, with the exception of the 'stretch goals'.  Shown below is a screenshot of the kanban board I created for this project.
 
-![Screenshot of kanban board relavent to this project](static/images/readme/kanban-board.png)
+| ![Screenshot of kanban board relavent to this project](static/images/readme/kanban-board.png) | ![Screenshot of a kanban issue relavent to this project](static/images/readme/kanban-issue.png) |
+|:-------------------------------------------:|:-------------------------------------------:|
+| **Kanban board** | **Kanban Issue** |
 
 ## Technologies
 
@@ -181,7 +183,7 @@ This is a list of technologies I used while building this site:
 - Code Institute's Gitpod Template - to generate the workspace for the project.
 - Mural - to make the ERD's for database interactions.
 - [Lorem Ipsum](https://loremipsum.io/) - Creating initial content to check pagination.
-- ElephantSQL - to host the postgres database.
+- Supabase - to host the postgres database.
 
 This is a list of technologies I used to design this website:
 ***
@@ -193,6 +195,7 @@ This is a list of technologies I used to design this website:
 - [Favicon](https://favicon.io/) To create favicon for the website.
 - [Open art AI](https://openart.ai/home) To create the background image.
 - [ChatGPT](https://chat.openai.com/) used for spell checking, grammar, readability, and creating blog posts.
+- [Nimbus Screenshot](https://nimbusweb.me/) used for screenshots
 - My own photo's.
 
 This is a list of the technologies I used to help me spell and grammer check, as well as error check code when I ran into issues displaying the gallery:
@@ -211,39 +214,13 @@ This is a list of technologies I used to manually test both the code and the acc
 - [Colorfilter](https://www.toptal.com/designers/colorfilter/) to check website for colour-blind accessibility.
 - [NVDA screen reader](https://www.nvaccess.org/) to access screen reader capabilities on website.
 - Google Chrome's [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to check accessibility.
+- [WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/) used to spot check individual pages.
 - [W3C HTML Markup Validator](https://validator.w3.org/) to check HTML code.
 - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to check CSS code.
 
 ## Testing
 
 Please see [TESTING.md](TESTING.md) for all testing data.
-
-### Accessibility testing
-
-In order to test the accessibility of the site I run the site through the following tests:
-***
-
-- Colourblind testing:
-- - [Red/Green - red cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=protan)
-- - [Red/Green - green cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=deutan)
-- - [Blue/Yellow - blue cone based](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=tritan)
-- - [Greyscale](https://www.toptal.com/designers/colorfilter?orig_uri=https://werecat-blog-46217e65417f.herokuapp.com/&process_type=grey)
-- NVDA screen reader: While using this app I had no problem understanding what was being said.
-- Aria/Alt: Used throughout the site to maximise readabilty by screen readers.
-
-#### Lighthouse output
-
-I ran lighthouse to check the overall accessibility rating of the website, the results below are for both a desktop and a mobile device:
-
-##### Desktop
-
-![Google lighthouse desktop output](static/images/readme/lighthouse-desk.png)
-
-##### Mobile
-
-![Google lighthouse mobile output](static/images/readme/lighthouse-mob.png)
-
-Overall the accessibilitiy of the site is good.
 
 ## Deployment
 
@@ -290,7 +267,11 @@ This is a django project, as such it has been built with the django framework, i
   - Give your app a name and select your region from drop down.
   - Click 'Create new app'.
   - Go to 'settings' tab, it's important you do it before deployment.
-  - Scroll down to 'config vars' section and key: PORT and value: 8000.
+  - Scroll down to 'config vars' section and add all variables needed:
+    - Cloudinary API key and secret, cloud name, and URL.
+    - Database URL.
+    - Email host, password, user, and port.
+    - Secret key.
   - Scroll down to 'Buildpacks' section.
   - Click 'Add buildpack'.
   - Add Python as first dependency and select 'Save changes'.
@@ -299,7 +280,7 @@ This is a django project, as such it has been built with the django framework, i
   - Select 'Github' from 'Deployment method'.
   - Type the name given to your project in Github and click 'search'.
   - Scroll down and select Manual deployment method.
-  - You can also use Auto deployment method to allow the project to update every time you push the code.
+    - You can also use Auto deployment method to allow the project to update every time you push the code.
   - You can now click to view the app ready and running.
 
 ### Important Information about deploying the app
