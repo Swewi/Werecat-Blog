@@ -255,7 +255,7 @@ I have used ESlint to check the .js files used across the site, there were no pr
 
 ## Browser Testing
 
-I tested four of the most popular browsers:
+I tested four of the most commonly used browsers:
 
 - Google Chrome
   - I have opened every page from every other page, all the links worked.
