@@ -404,6 +404,12 @@ footer a {
     color: #eae333;
 }
 
+.error-pg {
+    background-color: rgba(25, 25, 25, 0.4);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
 /* Media Queries */
 
 /* Adjustments for small and medium-sized devices */
