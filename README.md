@@ -183,7 +183,8 @@ This is a list of technologies I used while building this site:
 - Code Institute's Gitpod Template - to generate the workspace for the project.
 - Mural - to make the ERD's for database interactions.
 - [Lorem Ipsum](https://loremipsum.io/) - Creating initial content to check pagination.
-- Supabase - to host the postgres database.
+- [Supabase](https://supabase.com/) - to host the postgres database.
+- [Mailtrap](https://mailtrap.io/) - To handle messages to client email.
 
 This is a list of technologies I used to design this website:
 ***
