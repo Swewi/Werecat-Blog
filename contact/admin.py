@@ -4,6 +4,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
 
+
 @admin.register(Contact)
 class ContactRequestAdmin(admin.ModelAdmin):
 

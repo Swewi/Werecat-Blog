@@ -5,6 +5,7 @@ from django.template.loader import render_to_string
 from .forms import ContactForm
 from .models import Contact
 
+
 def contact(request):
     """
     View function to render the contact page with contact information.
@@ -44,4 +45,3 @@ def contact(request):
         "contact/contact.html",
         {"contact_form": contact_form},
     )
-
