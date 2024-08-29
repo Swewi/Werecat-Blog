@@ -51,7 +51,7 @@ def post_detail(request, slug):
     )
 
 
-@login_require
+@login_required
 def comment_edit(request, slug, comment_id):
     post = get_object_or_404(Post, slug=slug, status=1)
     comment = get_object_or_404(Comment, id=comment_id, post=post)
