@@ -8,21 +8,25 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 # Create your views here.
+
+
 class PostList(generic.ListView):
+
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 3
+
 
 def post_detail(request, slug):
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.count()
-    
+
     if request.method == "POST":
         if not request.user.is_authenticated:
             return redirect(f'/accounts/login/?next=/post/{slug}/')
-    
+
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -31,7 +35,7 @@ def post_detail(request, slug):
             comment.save()
             messages.success(request, 'Comment submitted successfully')
             return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-    
+
     else:
         comment_form = CommentForm()
 
@@ -46,7 +50,8 @@ def post_detail(request, slug):
         },
     )
 
-@login_required
+
+@login_require
 def comment_edit(request, slug, comment_id):
     post = get_object_or_404(Post, slug=slug, status=1)
     comment = get_object_or_404(Comment, id=comment_id, post=post)
@@ -67,6 +72,7 @@ def comment_edit(request, slug, comment_id):
     context = {'comment': comment, 'form': form, 'post': post}
     return render(request, 'blog/edit_comment.html', context)
 
+
 @login_required
 def comment_delete(request, slug, comment_id):
     queryset = Post.objects.filter(status=1)
@@ -80,4 +86,3 @@ def comment_delete(request, slug, comment_id):
         messages.error(request, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
