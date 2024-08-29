@@ -42,6 +42,12 @@ body {
     text-shadow: 0 0 5px #ff0000, 0 0 7px #0000ff, 0 0 8px #151515;
 }
 
+.navbar-toggler {
+    background-color: rgba(164, 239, 84, 0.51);
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
 .comment-icon {
     color: #000 !important;
     border: none;
@@ -282,6 +288,10 @@ label {
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+
+.post-pad {
+    margin-bottom: 0.6rem;
 }
 
 /* Signup and edit button styling */
